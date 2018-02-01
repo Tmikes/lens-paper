@@ -97,18 +97,9 @@
 %\shortauthortitle{Firstauthor \MakeLowercase{\textit{et al.}}: Paper Title}
 
 %% Abstract section.
-\abstract{ merde c'est quoi tout ça ? Duis autem vel eum iriure dolor in hendrerit in vulputate
-velit esse molestie consequat, vel illum dolore eu feugiat nulla
-facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-praesent luptatum zzril delenit augue duis dolore te feugait nulla
-facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem
-vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
-accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
-delenit augue duis dolore te feugait nulla facilisi.%
+\abstract{ Occlusion is an issue in volumetric datasets visualization as it prevents direct visualization of the region of interest. To address this problem, many techniques have been developed such as transfer functions, volume segmentation or view distortion. Even if these techniques have proven their efficiency, there is still room for improvement to better support the understanding of objects' vicinity. In many cases, objects cannot be considered as only single items; they are intertwined and create a global meaningful context. For these reasons, we investigated a new technique which maintains the general structure of the investigated volumetric dataset while addressing occlusion issues.
+As such, we propose a focus+context technique. The user interactively defines an area of interest where an occluded region or object is partially visible. Then our lens starts to operate and pushes at its border occluding objects (i.e. local deformation), thus revealing hidden parts of the volumetric data. Next, the lens is modified with an extended field of view (fish-eye deformation) to better see the vicinity of the selected region. Finally, the user can freely explore the surroundings for the area under investigation within this lens.
+To develop this technique, we used a GPU accelerated ray-casting framework with a set of interactive tools to ease volumetric data exploration and real-time manipulation. We illustrated the efficiency of this technique thanks to three examples where the occlusion issue is addressed: 3D scanned luggage exploration, aircraft trajectories, and streamlines..%
 } % end of abstract
 
 %% Keywords that describe your work. Will show as 'Index Terms' in journal
