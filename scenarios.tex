@@ -3,7 +3,7 @@
 
 The obstruction-free fish-eye lens can be used with different types of volumetric datasets. First, we present a scenario based on baggage inspection (an heterogeneous dataset). Second, we apply our lens technique to a volume of streamlines where the transparency doesn't allow seeing a dense spherical item within its context. Finally, we observe  a special aircraft trajectory within its context inside a dataset representing one day of traffic.
 
-\subsection{Baggage inspection: an unusual blunt object}
+\subsection{Baggage inspection: An unusual blunt object}
 
 \begin{figure*} 
 \includegraphics [width=\textwidth]{images/aircraft_lens.pdf} 
@@ -26,26 +26,31 @@ Using the obstruction-free fish-eye lens can help in this kind of situation. The
 
 
 
-\subsection{Streamlines visualization}
+\subsection{Fluid flow: A deep-buried spherical vortex}
+\label{sec:flow}
+%
+%
+Flow visualization using streamlines has a long history in scientific visualization~\cite{brambilla2012illustrative,xxx}. When applied to 3D datasets, a key challenge is to balance the streamline density. Low values allow seeing inner regions in the data but can subsample (miss) important patterns. High values show more data but create too much occlusion. We next show how our lens can be used to discover interesting patterns in the second case, \emph{i.e.}, a 3D volume densely filled with streamlines. The dataset, introduced in\,\cite{griebel2004flow}, captures the simulation of water flow in a basin computed on a grid of 128x85x42 cells. A set of 4595 streamlines with 183K sample points is next traced by pseudo-random seeding over this vector field. We convert this set of 3D curves (polylines) to a scalar volume by using kernel density estimation (KDE)\,\cite{silverman1986density}. Similar techniques have been used to compute density maps of 2D trail-sets\,\cite{hurter2012graph,cubu,hurter2015image}. To increase computational speed, we compute the KDE in the frequency space and using GPU acceleration, following\,\cite{lhuillier2017ffteb}. The resulting volumes have a resolution of $500^3$ voxels and can be directly displayed using DVR (\autoref{f:streamLineSTDViz}). Note that, given the smoothing effect of KDE, streamlines appear now as finite-thickness tubes rather than pixel-thin curves.
+
+For a first overview, we display the volume using standard DVR. After turning the viewpoint a bit, we notice a dense spherical item inside the dataset (\autoref{f:streamLineSTDViz}a). To see its shape better, we increase the opacity; however, this immediately increases occlusion so the item becomes invisible. Conversely, decreasing opacity to reduce occlusion makes the item almost transparent. Our lens solves the problem: In the initial view (\autoref{f:streamLineSTDViz}a), we point at the object and turn on the lens. This effectively pushes away the occluding stream bundles, and lets us see that our item is nearly perfectly spherical (\autoref{f:stream_lens}). This is something we could not have assessed from \emph{any} viewpoint and with likely any opacity modulation using standard DVR. Our object is a set of densely-packed, low-speed, tightly-turning streamlines that create a ball-like vortex. Interestingly, this spherical vortex has not been discovered by any of the visualization techniques that we are aware of that used this same dataset\,\cite{telea_vis_99,griebel2004flow,ddh,lhuillier2017ffteb,maybe_more}.
 
 
+\begin{figure*}[htb]
+\includegraphics [width=\textwidth]{images/stream_lens.pdf}
+\caption{A spherical item and its surrounding area are inspected using to our lens with two different transfer functions. The first part is displayed with transparency in opposition to the part below. The opacity helps to see the shape of the surrounding whirlpool. (a-a') The streamline dataset displayed using our framework. A dense object is hidden inside a whirlpool. (b-b') The lens tool is applied to the partially hidden object (double-click). The area is magnified and the occluding part of the whirlpool located in front of the spherical item is pushed aside. (c-c') The directions of the rays inside the lens are modified to see the whole sphere through the lens (right click+ mouse drag toward the desired direction). (d-d') The occluding part of the whirlpool can be restored/pushed gradually while keeping the area magnified (Shift + scroll).  }
+\label{f:stream_lens}
+\end{figure*}
 
-Streamlines visualization has a long history in the scientific visualization community \cite{brambilla2012illustrative}. One of the major challenges is to produce an efficient visualization to display flow directions and their structure in a dense and tangled set of streamlines. In this scenario, we do not claim to propose a new visualization technique, but we rather show how our interactive fish-eye lens can leverage user ability to inspect interesting phenomena within its context (a dense and cluttered streamline dataset). 
-\autoref{f:streamLineSTDViz} shows 2 visualizations of our streamline dataset. We use the dataset extracted from  ~\cite{griebel2004flow} which corresponds to a water flow in a basin computed on a  grid of 128x85x42 cells, a set of 4595 stream lines with 183k sampled points. We use an accumulative blending process to distinguish dense areas where many streamlines are aggregated and generate a volume with a size of 500x500x500 voxels. In the first picture \autoref{f:streamLineSTDViz}-a the streamlines are displayed with transparency, which allows noticing a dense spherical item inside the dataset. But when we increase the opacity of the surrounding whirlpool in order to better see its shape and behavior, the spherical item become occluded.
-% This visualization suffers from a lack of insight retrieval but it provides evidence of a whirlpool located on the top left part of the image.
-Thanks to our interactive lens, the user can distort the view and push on the border of the lens the occluding stream ,and then, inspect this spherical object as well as its context in more details by defining different points of view (\autoref{f:stream_lens}).  Interesting enough, this object corresponds to a streamline with a tiny velocity which makes this line very short. Since every stream in our dataset contains the same number of sampled points, this object has a high density (we used a data convolution technique to turn our vectorial streamline dataset into a volumetric one). In conclusion, our technique eases the detection and the investigation of dataset subset. Other techniques can be applied, but our method is fast and flexible enough to leverage user ability with this streamline dataset exploration.
-
-% \begin{figure} 
-% \includegraphics [width=0.45\textwidth]{images/streamLineSTDViz.png} 
-% \caption{ This figure shows a standard streamline dataset visualization with a cumulative alpha blending. In the top left part of this image, one can barely distinguish a whirlpool.}
-% \label{f:streamLineSTDViz}
-% \end{figure} 
-
-
-
-\subsection{Unusual aircraft trajectories in French sky}
+\begin{figure}[htb]
+\includegraphics [width=0.45\textwidth]{images/streamline_orientation.pdf}
+\caption{Two views of a streamlines dataset. (a) The transfer function used allows to spot a spherical dense item inside the volume thanks to transparency. (b) This spherical object become occluded when the opacity of the surrounding whirlpool is increased in order to analyze its shape and behavior. \textbf{ALEX: Could and should be merged with \autoref{f:stream_lens}.}}
+\label{f:streamLineSTDViz}
+\end{figure}
 
 
+\subsection{Aircraft trajectories: Outliers in the French sky}
+%
+%
 One of the major issue when visualizing large dataset of moving object is to address the occlusion issue where too many lines spoil their investigation. Many investigations have already been done, especially regarding aircraft movement exploration \cite{hurter2014interactive}.
 \begin{figure} 
 \includegraphics [width=0.45\textwidth]{images/aircraft.pdf} 
