@@ -1,3 +1,5 @@
+\begin{comment}
+%ALEX: Already discussed in the appropriate section on streamlines
 
 Moving objects are entities that change locations in space over time. This is the case with aircraft trajectories where an aircraft takes off at a given airport at the beginning of its strip and lands onto another one at the end of its journey. Classical methods use projected lines on a 2D visualization to explore dataset composed of such moving objects \cite{hurter2014interactive}. Even if such methods have shown valuable results, additional insight and data retrieval can be envisaged with other rendering techniques like volume rendering.
 
@@ -5,3 +7,6 @@ Moving objects are entities that change locations in space over time. This is th
 Such process works as follows: we first define a 3D Gaussian kernel of a radius R; the center of this kernel has the highest value, while its border the lowest. Second, we re-sample every trajectory with a minimum distance between two consecutive points inferior to the half of the kernel radius. Third, we compute the convolution of this 3D kernel with the re-sampled trajectories.
 
 Convolution can take time with a large dataset to process, therefore, we turned this computation into the frequential space. Such technique has already been applied with trajectory dataset and can even be accelerated thanks to GPU techniques \cite{lhuillier2017ffteb}.
+
+\end{comment}
+

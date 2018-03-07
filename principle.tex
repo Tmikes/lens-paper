@@ -1,18 +1,21 @@
 \begin{figure*}[htbp]
 \centering
-\includegraphics [width=0.8\textwidth]{images/principle.pdf}
 \vspace{-0.15cm}
-\caption{Principle of the obstruction-free lens. An interesting object is partially hidden by occluders in front of it. (a) Classic raycasting result. (b) Our lens gathers the rays to avoid occluders. Once close to the target, rays follow again their initial paths. However, only a small part of the target is visible. (c) Scattering the rays makes the full target visible.}
+\includegraphics [width=0.97\textwidth]{images/principle.eps}
+\vspace{-0.15cm}
+\caption{Principle of the obstruction-free lens. An interesting target object is mostly hidden by occluders in front of it. (a) Classic raycasting result shows a small part of the target. (b) Our lens gathers the rays to avoid occluders. Once close to the target, rays follow again their initial paths. However, only a small part of the target is visible. (c) Scattering the rays makes the full target visible.}
 \label{f:fisheye}
 \vspace{-0.15cm}
 \end{figure*}
 
+\vspace{-0.15cm}
 \section{Principle}
 \label{sec:principle}
 %
 %
-Our proposed lens combines the modification of several parameters of a typical DVR rendering of volume data, as follows. Consider the typical DVR algorithm: Given a scalar volume $V \subset \mathbf{R}^3 \rightarrow \mathbf{R}$, each pixel $\mathbf{x} \in I$ in the DVR image $I \subset \mathbf{R}^2$ thereof corresponds to the compositing of sampled data along a ray starting passing through $V$ and ending at $\mathbf{x}$. In classical DVR (\autoref{f:fisheye}-a), such rays are defined by the eye position $\mathbf{e}$ and a viewing-direction unit vector $\mathbf{d} = (\mathbf{x} - \mathbf{e}) / \| \mathbf{x} - \mathbf{e} \|$ pointing from $\mathbf{e}$ to $\mathbf{x}$. Consider next a focus point $\mathbf{f} \in I$ (the \emph{lens center}) and a lens radius $R > 0$. In our proposal, we modify all rays traveling through the disk $D = \{\mathbf{x} \in I | \| \mathbf{x} - \mathbf{f} \| \leq R\}$, or \emph{focus area}, in order to de-occlude, magnify, and emphasize a target object. Our new ray behavior can be divided into three steps: (1) Provide an unobstructed view of the occluded object. This moves closer to the target while avoiding the obstacles by pushing them aside. (2) Set a wide field-of-view (fisheye) to better see the target. (3) Interactively modify various parameters of the lens, lighting, and opacity TF in real time to better explore the target. These steps are detailed next.
+Our proposed lens combines the modification of several parameters of a typical DVR rendering of volume data, as follows. Consider the typical DVR algorithm: Given a scalar volume $V \subset \mathbf{R}^3 \rightarrow \mathbf{R}$, each pixel $\mathbf{x} \in I$ in the DVR image $I \subset \mathbf{R}^2$ thereof corresponds to the compositing of sampled data along a ray starting passing through $V$ and ending at $\mathbf{x}$. In classical DVR (\autoref{f:fisheye}-a), such rays are defined by the eye position $\mathbf{e}$ and a ray direction unit vector $\mathbf{d} = (\mathbf{x} - \mathbf{e}) / \| \mathbf{x} - \mathbf{e} \|$ pointing from $\mathbf{e}$ to $\mathbf{x}$. Consider next a focus point $\mathbf{f} \in I$ (the \emph{lens center}) and a lens radius $R > 0$. In our proposal, we modify all rays traveling through the disk $D = \{\mathbf{x} \in I | \| \mathbf{x} - \mathbf{f} \| \leq R\}$, or \emph{focus area}, in order to de-occlude, magnify, and emphasize a target object. Our new ray behavior can be divided into three steps: (1) Provide an unobstructed view of the occluded object. This moves closer to the target while avoiding the obstacles by pushing them aside. (2) Set a wide field-of-view (fisheye) to better see the target. (3) Interactively modify various parameters of the lens, lighting, and opacity TF in real time to better explore the target. These steps are detailed next.
 
+\vspace{-0.15cm}
 \subsection{Creating an unobstructed view}
 \label{sec:gathering}
 %
@@ -25,6 +28,7 @@ The scenario our lens addresses is as follows: Given a volume $V$, users produce
 %
 with $\alpha \in [0,1]$. When $\alpha=0$ (default value), all rays follow the lens axis $\mathbf{a}$, thus, can best pass through obstacles. When $\alpha=1$, rays follow their original classical DVR path. Changing $\alpha$ with the mouse wheel allows one to smoothly navigate between the lens effect, \emph{i.e.} opening up a `hole' in the volume to see the target, and a classical DVR visualizaton of the volume.
 %
+\vspace{-0.15cm}
 \subsection{Setting a wide field of view}
 \label{sec:scattering}
 %
@@ -38,13 +42,7 @@ Once the rays pass obstacles (Sec.~\ref{sec:gathering}), we want to \emph{scatte
 for any pixel $\mathbf{x} \in D$ and any $t \geq t_{min}$. Here, $\beta \geq 0$ controls the ray scattering: Small values magnify a small volume area located close to the ray $\mathbf{r}(\mathbf{x})$; larger values sample more of the volume area behind the lens. Intuitively, this works as if we moved a maginfying lens to a depth $t_{min}$ inside $V$. Summarizing, after the user finds an interesting but partially occluded target using \emph{standard} DVR, the lens squeezes rays to pass between occluders and next fans them out to reveal the target in full detail. The parameter $\beta$ can be adjusted by the user via the mouse scroll wheel while pressing the Shift key (\autoref{f:fisheye}-c).
 %
 %
-\begin{figure}[htbp]
-\centering
-\includegraphics [width=0.4\textwidth]{images/bagage_orientation_bis.pdf}
-\caption{A baggage presented under two different perspectives. (a) The baggage is composed by various type of items. the camera is located at the top front of the baggage. (b) The camera is located at the baggage side.}
-\label{f:baggage_orientation}
-\end{figure}
-
+\vspace{-0.15cm}
 \subsection{Interactive exploration of the target}
 %
 We allow users to interactively modify several parameters of the DVR and the lens to achieve a more effective exploration, as follows.
@@ -72,9 +70,13 @@ Separately, we use a slow-in/slow-out animation~\cite{Dragicevic:2011:TDA:197894
 
 \section{Implementation}
 \label{sec:implem}
+%
+We implemented our occlusion-free lens by modifying a standard DVR ray caster implemented in turn using NVIDIA's CUDA platform. The key changes required for this are in the definition of the ray (Eqns.~\ref{eqn:gathering} and \ref{eqn:scattering}) and controlling the lens and local per-voxel Phong lighting parameters via mouse and keyboard events. On a PC with xxx GB RAM and a GeForce xxx card, we achieve an interactiv framerate (xxx fps) for volumes up to $xxx^3$ voxels. Currently, we use a compositing ray function. However, any other functions can be directly used with no restrictions. All in all, adding our lens to an existing ray caster should be easy.
+
+\begin{comment}
+%ALEX: Commented out the algo pseudocode. There are so far several problems with it, needs to be rewritten, anyways using the current notations. We can see if we have space/time to do it when all else is ready.
 
 Algorithm \ref{alg:propagation} shows a pseudo code of the behavior of our deforming lens
-
 
 \begin{algorithm}
 \SetKwInOut{Input}{Input}
@@ -132,5 +134,7 @@ return $color$
 \label{alg:propagation}
  \caption{Pseudo code of our lens deformation algorithm}
 \end{algorithm}
+
+\end{comment}
 
 
