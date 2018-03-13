@@ -1,3 +1,16 @@
+@ARTICLE{4276082, 
+author={Y. Wu and H. Qu}, 
+journal={IEEE Transactions on Visualization and Computer Graphics}, 
+title={Interactive Transfer Function Design Based on Editing Direct Volume Rendered Images}, 
+year={2007}, 
+volume={13}, 
+number={5}, 
+pages={1027-1040}, 
+keywords={data visualisation;transfer functions;animations;context visualization;direct volume rendered images;image editing;interactive transfer function;visualization techniques;Animation;Biomedical imaging;Computational fluid dynamics;Data visualization;Focusing;Fuses;Graphics;Rendering (computer graphics);Transfer functions;User interfaces;Direct volume rendering;animation;focus + context;image editing;intuitive user interface;morphing;transfer function design;Algorithms;Computer Graphics;Image Enhancement;Image Interpretation, Computer-Assisted;Imaging, Three-Dimensional;Information Storage and Retrieval;Numerical Analysis, Computer-Assisted;Signal Processing, Computer-Assisted;User-Computer Interface;Word Processing}, 
+doi={10.1109/TVCG.2007.1051}, 
+ISSN={1077-2626}, 
+month={Sept},}
+
 @misc{Grinstein:2002:IVV,
   author = {Georges Grinstein and Daniel Keim and Matthew Ward},
   title = {Information Visualization, Visual Data Mining, and Its Application to Drug Design},
@@ -5,6 +18,23 @@
   month = {October},
   year = {2002},
 	url = {http://vis.computer.org/vis2002/program/tutorials/tutorial_01_abstract.html}
+}
+
+@misc{cudasdk,
+author = {{NVIDIA, Inc.}},
+title = {{CUDA SDK} Code Samples},
+url = {\url{http://www.nvidia.com/object/cuda_get_samples_3.html}},
+year = 2018
+}
+
+@article{cubu,
+author = {M. van der Zwan and V. Codreanu and A. Telea},
+title = {{CUBu}: Universal Real-Time Bundling for Large Graphs},
+journal = {IEEE TVCG},
+volume = 22,
+number = 12,
+pages = {2550-2563},
+year = 2016
 }
 
 @Article{Isenberg:2017:VMC,
@@ -19,6 +49,16 @@
 	doi = {http://dx.doi.org/10.1109/TVCG.2016.2615308},
   OPTgooglescholarid = {},
 	note = {To appear},
+}
+
+@article{slicer,
+author = {R. Kikinis R and S. D. Pieper and K. Vosburgh},
+title = {{3D Slicer}: A platform for subject-specific image analysis, visualization, and clinical support},
+year = 2014,
+journal = {Intraoperative Imaging Image-Guided Therapy},
+volume = 3,
+number = 19,
+pages = {277-289}
 }
 
 @mastersthesis{Kindlmann:1999:SAG,
@@ -212,15 +252,24 @@ month={Sept},}
 }
 
 
-@inproceedings{hurter2012graph,
+@article{moleview,
+title = {{M}ole{V}iew: An attribute and structure-based semantic lens for large element-based plots},
+author = {C. Hurter and A. Telea and O. Ersoy},
+journal = {IEEE TVCG},
+volume = 17,
+number = 12,
+pages = {2600-2609},
+year = 2011
+}
+
+@article{hurter2012graph,
   title={Graph bundling by kernel density estimation},
   author={Hurter, Christophe and Ersoy, Ozan and Telea, Alexandru},
-  booktitle={Computer Graphics Forum},
+  journal={Computer Graphics Forum},
   volume={31},
   number={3pt1},
   pages={865--874},
   year={2012},
-  organization={Blackwell Publishing Ltd}
 }
 
 
@@ -237,11 +286,10 @@ month={Sept},}
 
 
 @inproceedings{lhuillier2017ffteb,
-  title={FFTEB: Edge Bundling of Huge Graphs by the Fast Fourier Transform},
+title={{FFTEB}: Edge Bundling of Huge Graphs by the {F}ast {F}ourier {T}ransform},
   author={Lhuillier, Antoine and Hurter, Christophe and Telea, Alexandru},
-  booktitle={PacificVis 2017, 10th IEEE Pacific Visualization Symposium},
+  booktitle={Proc. IEEE PacificVis},
   year={2017},
-  organization={IEEE}
 }
 
 
@@ -305,6 +353,14 @@ url = {http://dx.doi.org/10.1111/j.1467-8659.2005.00855.x},
 doi = {10.1111/j.1467-8659.2005.00855.x},
 pages = {303--312},
 year = {2005},
+}
+
+@inproceedings{telea_vis_99,
+author = {A. Telea and J. J. van Wijk},
+title = {Simplified representation of vector fields},
+booktitle = {Proc. IEEE Visualization},
+year = 1999,
+pages = {263-270}
 }
 
 @inproceedings{Stegmaier:2005:SFV:2386472.2386498,
@@ -643,7 +699,7 @@ month={July},}
 } 
 
 
-@Inbook{Thiede2008,
+@InCollection{Thiede2008,
 author="Thiede, Conrad
 and Fuchs, Georg
 and Schumann, Heidrun",
@@ -658,9 +714,6 @@ year="2008",
 publisher="Springer Berlin Heidelberg",
 address="Berlin, Heidelberg",
 pages="178--189",
-isbn="978-3-540-85412-8",
-doi="10.1007/978-3-540-85412-8_16",
-url="http://dx.doi.org/10.1007/978-3-540-85412-8_16"
 }
 
 @inproceedings{Pindat:2012:JCA:2380116.2380150,
@@ -841,18 +894,7 @@ doi={10.1109/MCG.2017.10},
 ISSN={0272-1716}, 
 month={Jan},}
 
-@ARTICLE{7539643, 
-author={X. Tong and C. Li and H. W. Shen}, 
-journal={IEEE Transactions on Visualization and Computer Graphics}, 
-title={GlyphLens: View-Dependent Occlusion Management in the Interactive Glyph Visualization}, 
-year={2017}, 
-volume={23}, 
-number={1}, 
-pages={891-900}, 
-keywords={data visualisation;interactive systems;solid modelling;2D surface;3D spatial structure;3D volumetric dataset;GlyphLens;context information;display-interaction techniques;feature surface;interactive glyph visualization;lens shape models;multivariate visualization technique;slicing plane;space deformation models;spatial distributions;user-interested region;view-dependent interactive 3D lens;view-dependent occlusion management;visual channels;Context;Data visualization;Lenses;Probes;Shape;Three-dimensional displays;Visualization;View-dependent visualization;focus + context techniques;glyph-based techniques;human-computer interaction;manipulation and deformation}, 
-doi={10.1109/TVCG.2016.2599049}, 
-ISSN={1077-2626}, 
-month={Jan},}
+
 
 @ARTICLE{7332955, 
 author={X. Tong and J. Edwards and C. M. Chen and H. W. Shen and C. R. Johnson and P. C. Wong}, 
@@ -970,6 +1012,16 @@ ISBN = {3-905673-41-X},
 DOI = {10.2312/VG/VG06/009-016}
 }
 
+@article{ddh,
+author = {M. H. Everts and H. Bekker and J. Roerdink and T. Isenberg},
+title  = {Depth-Dependent Halos: Illustrative Rendering of Dense Line Data},
+journal = {IEEE TVCG},
+volume = 15,
+number = 6,
+pages = {1299-1306},
+year = 2009
+}
+
 @inproceedings{Dragicevic:2011:TDA:1978942.1979233,
  author = {Dragicevic, Pierre and Bezerianos, Anastasia and Javed, Waqas and Elmqvist, Niklas and Fekete, Jean-Daniel},
  title = {Temporal Distortion for Animated Transitions},
@@ -991,9 +1043,8 @@ DOI = {10.2312/VG/VG06/009-016}
 @inproceedings{griebel2004flow,
   title={Flow field clustering via algebraic multigrid},
   author={Griebel, Michael and Preusser, Tobias and Rumpf, Martin and Schweitzer, Marc Alexander and Telea, Alexandru},
-  booktitle={Visualization, 2004. IEEE},
+  booktitle={Proc. IEEE Visualization},
   pages={35--42},
   year={2004},
-  organization={IEEE}
 }
 
