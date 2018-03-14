@@ -243,6 +243,11 @@ M.~J. McGuffin, L.~Tancau, and R.~Balakrishnan.
 }{.}\hspace{.4pt}1250400}}
 
 
+\bibitem{merzkirch2012flow}
+W.~Merzkirch.
+\newblock {\em Flow visualization}.
+\newblock Elsevier, 2012.
+
 \bibitem{cudasdk}
 {NVIDIA, Inc.}
 \newblock {CUDA SDK} code samples, 2018.
@@ -257,6 +262,17 @@ C.~Pindat, E.~Pietriga, O.~Chapuis, and C.~Puech.
 }{.}\hspace{.4pt}1145\discretionary{/}{%
 }{/}2380116\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}2380150}}
+
+
+\bibitem{CGF:CGF12927}
+B.~Preim, A.~Baer, D.~Cunningham, T.~Isenberg, and T.~Ropinski.
+\newblock A survey of perceptually motivated 3d visualization of medical image
+  data.
+\newblock {\em Computer Graphics Forum}, 35(3):501--525, 2016. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1111\discretionary{/}{%
+}{/}cgf\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}12927}}
 
 
 \bibitem{slicer}
@@ -328,6 +344,18 @@ C.~Tominski, S.~Gladisch, U.~Kister, R.~Dachselt, and H.~Schumann.
 }{.}\hspace{.4pt}1111\discretionary{/}{%
 }{/}cgf\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}12871}}
+
+
+\bibitem{6327262}
+C.~Tominski, H.~Schumann, G.~Andrienko, and N.~Andrienko.
+\newblock Stacking-based visualization of trajectory attribute data.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  18(12):2565--2574, Dec 2012. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2012\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}265}}
 
 
 \bibitem{7332955}

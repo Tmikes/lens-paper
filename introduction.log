@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.31)  13 MAR 2018 15:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.31)  14 MAR 2018 09:17
 entering extended mode
 **./introduction.tex
 (introduction.tex
@@ -924,11 +924,11 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no [ in font nullfont!
-\citation{cudasdk}
+\citation{4276082}
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.3 ...erstanding and user training \cite{cudasdk}
+l.3 ...erstanding and user training \cite{4276082}
                                                   . \emph{Local} mechanisms ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -937,7 +937,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `cudasdk' on page  undefined on input line 3.
+LaTeX Warning: Citation `4276082' on page  undefined on input line 3.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no . in font nullfont!
@@ -1564,7 +1564,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.5 ...tion context~\cite{595268,CGF:CGF12871,xxx}
+l.5 ... context~\cite{595268,CGF:CGF12871,6327262}
                                                   . However, efficiently sel...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1580,7 +1580,7 @@ Missing character: There is no , in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.5 ...tion context~\cite{595268,CGF:CGF12871,xxx}
+l.5 ... context~\cite{595268,CGF:CGF12871,6327262}
                                                   . However, efficiently sel...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1592,11 +1592,11 @@ and I'll forget about whatever was undefined.
 LaTeX Warning: Citation `CGF:CGF12871' on page  undefined on input line 5.
 
 Missing character: There is no , in font nullfont!
-\citation{xxx}
+\citation{6327262}
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.5 ...tion context~\cite{595268,CGF:CGF12871,xxx}
+l.5 ... context~\cite{595268,CGF:CGF12871,6327262}
                                                   . However, efficiently sel...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1605,7 +1605,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `xxx' on page  undefined on input line 5.
+LaTeX Warning: Citation `6327262' on page  undefined on input line 5.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no . in font nullfont!
@@ -3499,7 +3499,7 @@ Missing character: There is no . in font nullfont!
  
 Here is how much of TeX's memory you used:
  20 strings out of 493312
- 299 string characters out of 3138893
+ 303 string characters out of 3138893
  55761 words of memory out of 3000000
  3666 multiletter control sequences out of 15000+200000
  4294 words of font info for 16 fonts, out of 3000000 for 9000
