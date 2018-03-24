@@ -1,0 +1,440 @@
+\begin{thebibliography}{10}
+
+\bibitem{Alvina:2014:RER:2598153.2598200}
+J.~Alvina, C.~Appert, O.~Chapuis, and E.~Pietriga.
+\newblock Routelens: Easy route following for map applications.
+\newblock In {\em Proceedings of the 2014 International Working Conference on
+  Advanced Visual Interfaces}, AVI '14, pp. 125--128. ACM, New York, NY, USA,
+  2014. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1145\discretionary{/}{%
+}{/}2598153\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2598200}}
+
+
+\bibitem{brambilla2012illustrative}
+A.~Brambilla, R.~Carnecky, R.~Peikert, I.~Viola, and H.~Hauser.
+\newblock Illustrative flow visualization: State of the art, trends and
+  challenges.
+\newblock {\em Visibility-oriented Visualization Design for Flow Illustration},
+  2012.
+
+\bibitem{4015467}
+S.~Bruckner and M.~E. Groller.
+\newblock Exploded views for volume data.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  12(5):1077--1084, Sept 2006. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2006\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}140}}
+
+
+\bibitem{Burns:2008:ACC:1457515.1409107}
+M.~Burns and A.~Finkelstein.
+\newblock Adaptive cutaways for comprehensible rendering of polygonal scenes.
+\newblock In {\em ACM SIGGRAPH Asia 2008 Papers}, SIGGRAPH Asia '08, pp.
+  154:1--154:7. ACM, New York, NY, USA, 2008. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1145\discretionary{/}{%
+}{/}1457515\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1409107}}
+
+
+\bibitem{595268}
+M.~S.~T. Carpendale, D.~J. Cowperthwaite, and F.~D. Fracchia.
+\newblock Extending distortion viewing from 2d to 3d.
+\newblock {\em IEEE Computer Graphics and Applications}, 17(4):42--51, Jul
+  1997. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}38\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}595268}}
+
+
+\bibitem{Correa:2006:FAV:1187627.1187827}
+C.~Correa, D.~Silver, and M.~Chen.
+\newblock Feature aligned volume manipulation for illustration and
+  visualization.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  12(5):1069--1076, Sept. 2006. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2006\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}144}}
+
+
+\bibitem{Correa:2007:IDD:1313046.1313163}
+C.~Correa, D.~Silver, and M.~Chen.
+\newblock Illustrative deformation for data exploration.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  13(6):1320--1327, Nov. 2007. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2007\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}70565}}
+
+
+\bibitem{5416704}
+C.~D. Correa and K.~L. Ma.
+\newblock Visibility histograms and visibility-driven transfer functions.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  17(2):192--204, Feb 2011. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2010\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}35}}
+
+
+\bibitem{Dragicevic:2011:TDA:1978942.1979233}
+P.~Dragicevic, A.~Bezerianos, W.~Javed, N.~Elmqvist, and J.-D. Fekete.
+\newblock Temporal distortion for animated transitions.
+\newblock In {\em Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems}, CHI '11, pp. 2009--2018. ACM, New York, NY, USA, 2011.
+  doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1145\discretionary{/}{%
+}{/}1978942\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1979233}}
+
+
+\bibitem{4483791}
+N.~Elmqvist and P.~Tsigas.
+\newblock A taxonomy of 3d occlusion management for visualization.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  14(5):1095--1109, Sept 2008. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2008\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}59}}
+
+
+\bibitem{ddh}
+M.~H. Everts, H.~Bekker, J.~Roerdink, and T.~Isenberg.
+\newblock Depth-dependent halos: Illustrative rendering of dense line data.
+\newblock {\em IEEE TVCG}, 15(6):1299--1306, 2009.
+
+\bibitem{griebel2004flow}
+M.~Griebel, T.~Preusser, M.~Rumpf, M.~A. Schweitzer, and A.~Telea.
+\newblock Flow field clustering via algebraic multigrid.
+\newblock In {\em Proc. IEEE Visualization}, pp. 35--42, 2004.
+
+\bibitem{Hsu:2011:RFM:2070781.2024165}
+W.-H. Hsu, K.-L. Ma, and C.~Correa.
+\newblock A rendering framework for multiscale views of 3d models.
+\newblock {\em ACM Trans. Graph.}, 30(6):131:1--131:10, Dec. 2011. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1145\discretionary{/}{%
+}{/}2070781\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2024165}}
+
+
+\bibitem{hurter2015image}
+C.~Hurter.
+\newblock Image-based visualization: Interactive multidimensional data
+  exploration.
+\newblock {\em Synthesis Lectures on Visualization}, 3(2):1--127, 2015.
+
+\bibitem{hurter2014interactive}
+C.~Hurter, S.~Conversy, D.~Gianazza, and A.~Telea.
+\newblock Interactive image-based information visualization for aircraft
+  trajectory analysis.
+\newblock {\em Transportation Research Part C: Emerging Technologies},
+  47:207--227, 2014.
+
+\bibitem{hurter2012graph}
+C.~Hurter, O.~Ersoy, and A.~Telea.
+\newblock Graph bundling by kernel density estimation.
+\newblock {\em Computer Graphics Forum}, 31(3pt1):865--874, 2012.
+
+\bibitem{6787171}
+C.~Hurter, R.~Taylor, S.~Carpendale, and A.~Telea.
+\newblock Color tunneling: Interactive exploration and selection in volumetric
+  datasets.
+\newblock In {\em 2014 IEEE Pacific Visualization Symposium}, pp. 225--232,
+  March 2014. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}PacificVis\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2014\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}61}}
+
+
+\bibitem{moleview}
+C.~Hurter, A.~Telea, and O.~Ersoy.
+\newblock {M}ole{V}iew: An attribute and structure-based semantic lens for
+  large element-based plots.
+\newblock {\em IEEE TVCG}, 17(12):2600--2609, 2011.
+
+\bibitem{hurter2009fromdady}
+C.~Hurter, B.~Tissoires, and S.~Conversy.
+\newblock Fromdady: Spreading data across views to support iterative
+  exploration of aircraft trajectories.
+\newblock {\em IEEE TVCG}, 15(6):1017--1024, 2009.
+
+\bibitem{4069230}
+S.~Islam, D.~Silver, and M.~Chen.
+\newblock Volume splitting and its applications.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  13(2):193--203, March 2007. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2007\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}48}}
+
+
+\bibitem{Kincaid:2010:SFA:1907651.1907963}
+R.~Kincaid.
+\newblock Signallens: Focus+context applied to electronic time series.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  16(6):900--907, Nov. 2010. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2010\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}193}}
+
+
+\bibitem{4015450}
+J.~Kruger, J.~Schneider, and R.~Westermann.
+\newblock Clearview: An interactive context preserving hotspot visualization
+  technique.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  12(5):941--948, Sept 2006. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2006\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}124}}
+
+
+\bibitem{lhuillier2017ffteb}
+A.~Lhuillier, C.~Hurter, and A.~Telea.
+\newblock {FFTEB}: Edge bundling of huge graphs by the {F}ast {F}ourier
+  {T}ransform.
+\newblock In {\em Proc. IEEE PacificVis}, 2017.
+
+\bibitem{Li:2012:LVV:2425296.2425325}
+W.~Li, G.~Paladini, L.~Grady, T.~Kohlberger, V.~K. Singh, and C.~Bahlmann.
+\newblock Luggage visualization and virtual unpacking.
+\newblock In {\em Proceedings of the Workshop at SIGGRAPH Asia}, WASA '12, pp.
+  161--168. ACM, New York, NY, USA, 2012. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1145\discretionary{/}{%
+}{/}2425296\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2425325}}
+
+
+\bibitem{1250400}
+M.~J. McGuffin, L.~Tancau, and R.~Balakrishnan.
+\newblock Using deformations for browsing volumetric data.
+\newblock In {\em IEEE Visualization, 2003. VIS 2003.}, pp. 401--408, Oct 2003.
+  doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}VISUAL\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2003\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1250400}}
+
+
+\bibitem{merzkirch2012flow}
+W.~Merzkirch.
+\newblock {\em Flow visualization}.
+\newblock Elsevier, 2012.
+
+\bibitem{cudasdk}
+{NVIDIA, Inc.}
+\newblock {CUDA SDK} code samples, 2018.
+
+\bibitem{Pindat:2012:JCA:2380116.2380150}
+C.~Pindat, E.~Pietriga, O.~Chapuis, and C.~Puech.
+\newblock Jellylens: Content-aware adaptive lenses.
+\newblock In {\em Proceedings of the 25th Annual ACM Symposium on User
+  Interface Software and Technology}, UIST '12, pp. 261--270. ACM, New York,
+  NY, USA, 2012. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1145\discretionary{/}{%
+}{/}2380116\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2380150}}
+
+
+\bibitem{CGF:CGF12927}
+B.~Preim, A.~Baer, D.~Cunningham, T.~Isenberg, and T.~Ropinski.
+\newblock A survey of perceptually motivated 3d visualization of medical image
+  data.
+\newblock {\em Computer Graphics Forum}, 35(3):501--525, 2016. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1111\discretionary{/}{%
+}{/}cgf\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}12927}}
+
+
+\bibitem{slicer}
+R.~K. R, S.~D. Pieper, and K.~Vosburgh.
+\newblock {3D Slicer}: A platform for subject-specific image analysis,
+  visualization, and clinical support.
+\newblock {\em Intraoperative Imaging Image-Guided Therapy}, 3(19):277--289,
+  2014.
+
+\bibitem{CGF:CGF979}
+C.~Rezk-Salama and A.~Kolb.
+\newblock Opacity peeling for direct volume rendering.
+\newblock {\em Computer Graphics Forum}, 25(3):597--606, 2006. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1111\discretionary{/}{%
+}{/}j\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1467\discretionary{%
+}{-}{-}8659\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2006\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}00979\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}x}}
+
+
+\bibitem{silverman1986density}
+B.~W. Silverman.
+\newblock Density estimation for statistics and data analysis, 1986.
+
+\bibitem{telea_vis_99}
+A.~Telea and J.~J. van Wijk.
+\newblock Simplified representation of vector fields.
+\newblock In {\em Proc. IEEE Visualization}, pp. 263--270, 1999.
+
+\bibitem{Thiede2008}
+C.~Thiede, G.~Fuchs, and H.~Schumann.
+\newblock Smart lenses.
+\newblock In A.~Butz, B.~Fisher, A.~Kr{\"u}ger, P.~Olivier, and M.~Christie,
+  eds., {\em Smart Graphics: 9th International Symposium, SG 2008, Rennes,
+  France, August 27-29, 2008. Proceedings}, pp. 178--189. Springer Berlin
+  Heidelberg, Berlin, Heidelberg, 2008.
+
+\bibitem{Tominski:2011:ECU:2336207.2336211}
+C.~Tominski.
+\newblock Event-based concepts for user-driven visualization.
+\newblock {\em Information Visualization}, 10(1):65--81, Jan. 2011. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1057\discretionary{/}{%
+}{/}ivs\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2009\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}32}}
+
+
+\bibitem{1648236}
+C.~Tominski, J.~Abello, F.~van Ham, and H.~Schumann.
+\newblock Fisheye tree views and lenses for graph visualization.
+\newblock In {\em Tenth International Conference on Information Visualisation
+  (IV'06)}, pp. 17--24, July 2006. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}IV\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2006\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}54}}
+
+
+\bibitem{CGF:CGF12871}
+C.~Tominski, S.~Gladisch, U.~Kister, R.~Dachselt, and H.~Schumann.
+\newblock Interactive lenses for visualization: An extended survey.
+\newblock {\em Computer Graphics Forum}, pp. n/a--n/a, 2016. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1111\discretionary{/}{%
+}{/}cgf\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}12871}}
+
+
+\bibitem{6327262}
+C.~Tominski, H.~Schumann, G.~Andrienko, and N.~Andrienko.
+\newblock Stacking-based visualization of trajectory attribute data.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  18(12):2565--2574, Dec 2012. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2012\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}265}}
+
+
+\bibitem{7332955}
+X.~Tong, J.~Edwards, C.~M. Chen, H.~W. Shen, C.~R. Johnson, and P.~C. Wong.
+\newblock View-dependent streamline deformation and exploration.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  22(7):1788--1801, July 2016. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2015\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2502583}}
+
+
+\bibitem{7539643}
+X.~Tong, C.~Li, and H.~W. Shen.
+\newblock Glyphlens: View-dependent occlusion management in the interactive
+  glyph visualization.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  23(1):891--900, Jan 2017. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2016\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2599049}}
+
+
+\bibitem{7819413}
+M.~Traor\'e and C.~Hurter.
+\newblock Interactive exploration of 3d scanned baggage.
+\newblock {\em IEEE Computer Graphics and Applications}, 37(1):27--33, Jan
+  2017. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}MCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2017\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}10}}
+
+
+\bibitem{cubu}
+M.~van~der Zwan, V.~Codreanu, and A.~Telea.
+\newblock {CUBu}: Universal real-time bundling for large graphs.
+\newblock {\em IEEE TVCG}, 22(12):2550--2563, 2016.
+
+\bibitem{1532818}
+L.~Wang, Y.~Zhao, K.~Mueller, and A.~Kaufman.
+\newblock The magic volume lens: an interactive focus+context technique for
+  volume rendering.
+\newblock In {\em VIS 05. IEEE Visualization, 2005.}, pp. 367--374, Oct 2005.
+  doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}VISUAL\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2005\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1532818}}
+
+
+\bibitem{WangBaldonado:2000:GUM:345513.345271}
+M.~Q. Wang~Baldonado, A.~Woodruff, and A.~Kuchinsky.
+\newblock Guidelines for using multiple views in information visualization.
+\newblock In {\em Proceedings of the Working Conference on Advanced Visual
+  Interfaces}, AVI '00, pp. 110--119. ACM, New York, NY, USA, 2000. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1145\discretionary{/}{%
+}{/}345513\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}345271}}
+
+
+\bibitem{4276082}
+Y.~Wu and H.~Qu.
+\newblock Interactive transfer function design based on editing direct volume
+  rendered images.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  13(5):1027--1040, Sept 2007. doi: {{%
+10\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1109\discretionary{/}{%
+}{/}TVCG\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}2007\hspace{.1pt}\discretionary{.}{%
+}{.}\hspace{.4pt}1051}}
+
+
+\end{thebibliography}
