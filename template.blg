@@ -1,3 +1,47 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: template.aux
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: template.aux
 The style file: abbrv-doi.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: template.bib
+You've used 45 entries,
+            2598 wiz_defined-function locations,
+            914 strings with 13393 characters,
+and the built_in function-call counts, 39530 in all, are:
+= -- 8221
+> -- 841
+< -- 1290
++ -- 1608
+- -- 312
+* -- 1534
+:= -- 5726
+add.period$ -- 140
+call.type$ -- 45
+change.case$ -- 273
+chr.to.int$ -- 0
+cite$ -- 45
+duplicate$ -- 658
+empty$ -- 1434
+format.name$ -- 283
+if$ -- 10318
+int.to.chr$ -- 0
+int.to.str$ -- 45
+missing$ -- 44
+newline$ -- 393
+num.names$ -- 92
+pop$ -- 260
+preamble$ -- 1
+purify$ -- 229
+quote$ -- 0
+skip$ -- 499
+stack$ -- 0
+substring$ -- 2617
+swap$ -- 180
+text.length$ -- 710
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 178
+warning$ -- 0
+while$ -- 223
+width$ -- 47
+write$ -- 1284
