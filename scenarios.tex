@@ -1,7 +1,7 @@
 \section{Application Scenarios}
 \label{sec:scenarios}
 %
-Our obstruction-free fish-eye lens can be used with different types of volumetric datasets. To illustrate this, we next present four such use-cases considering scalar density volumes coming from baggage inspection, 3D flow simulation, radiology, and air traffic management.
+Our obstruction-free fish-eye lens can be used with different types of volumetric datasets. To illustrate this, we next present four such use-cases considering scalar density volumes coming from baggage inspection, 3D flow simulation, radiology, air traffic management, and diffusion tensor imaging.
 
 \subsection{Baggage inspection: An unusual blunt object}
 \label{sec:baggage}
@@ -73,7 +73,7 @@ To assess the added-value of our lens, we asked the two medical specialists (pul
 \label{sec:atc}
 %
 %
-Our final use-case considers a task from the air traffic planning field -- detecting and studying outliers in large-scale datasets containing tens of thousands of 3D (latitude, longitude, height) trails of aircraft over a given spatio-temporal region\,\cite{hurter2014interactive}. Typically, such datasets are displayed using 2D (latitude, longitude) plots where opacity encodes the spatial density of flights. \autoref{f:fromdady}-a shows one day of recorded aircraft trajectories over the French air space using this 2D technique. \autoref{f:fromdady}(b) shows a detail zoom-in of this dataset, where we can see an abnormal -- that is, far from straight or slightly curved -- aircraft trajectory: A tanker aircraft performed an eight-shaped loop as it was waiting to refuel other aircraft. Revealing such patterns using 2D techniques, \emph{e.g.} \cite{hurter2009fromdady}, is very hard. In particular, it is hard to de-occlude these patterns from the overall context of criss-crossing aircraft trails, even when one knows their 2D spatial location.
+We next consider a task from the air traffic planning field -- detecting and studying outliers in large-scale datasets containing tens of thousands of 3D (latitude, longitude, height) trails of aircraft over a given spatio-temporal region\,\cite{hurter2014interactive}. Typically, such datasets are displayed using 2D (latitude, longitude) plots where opacity encodes the spatial density of flights. \autoref{f:fromdady}-a shows one day of recorded aircraft trajectories over the French air space using this 2D technique. \autoref{f:fromdady}(b) shows a detail zoom-in of this dataset, where we can see an abnormal -- that is, far from straight or slightly curved -- aircraft trajectory: A tanker aircraft performed an eight-shaped loop as it was waiting to refuel other aircraft. Revealing such patterns using 2D techniques, \emph{e.g.} \cite{hurter2009fromdady}, is very hard. In particular, it is hard to de-occlude these patterns from the overall context of criss-crossing aircraft trails, even when one knows their 2D spatial location.
 
 Our lens can help for this task, as follows. We first convert the set of 3D trails to a $500^3$ density volume, using KDE as described for the streamline use-case (Sec.~\ref{sec:flow}). Examining this volume using standard DVR allows us to see that there is an outliner (that is, not straight) trail at some point in space, see curved patterns in \autoref{f:aircraft_lens}a. By activating the lens on this area and interactively tuning the target depth $t_{min}$ (since we don't know the height of this trail), we can quickly obtain a view where the outlier trajectory is in focus and the occluding ones are pushed away (\autoref{f:aircraft_lens}a). Finally, just as in the other examples presented so far, the user can quickly change the magnification factor and view direction to better study this trajectory in context (\autoref{f:aircraft_lens}b-d). From these images, one directly and easily sees that the outlier trajectory has an eight shape. Revealing this outlier trail using standard 2D visualization techniques\,\cite{hurter2009fromdady} costs several minutes. Doing the same using our lens approach costs under one minute, for the same users. Additionally, if we compare Figs.~\ref{f:fromdady}b and~\ref{f:aircraft_lens}b-d, we argue that the eight-shape of the outlier trajectory is much more prominent, and thus recognizable, in the latter images (using our lens) than in the former ones. Last but definitely not least: The 3D volume rendering approach that our lens is based on explicitly encodes the flight height information, so our lens can use it by interactively tuning the depth value $t_{min}$ where the lens is focused. This is not possible with 2D techniques which ignore this depth dimension.
 
@@ -87,16 +87,20 @@ We validated our findings with an air traffic data scientist with more than 10 y
 \end{figure*}
 %
 
-\begin{comment}
-%ALEX: I really have no idea what this image brings to the paper, it really doesn't show anything w.r.t. the lens. Remove.
 
-\begin{figure}
-\includegraphics [width=0.36\textwidth]{images/topViewFR.png} 
-\includegraphics [width=0.4\textwidth]{images/VerticalViewLabel.png} 
-\caption{Visualization of one day of recorded aircraft trajectories over France using our volume rendering framework. (a) The trajectories almost draw the map of France. (b) The trajectories are displayed according to their altitudes. }
-\label{f:aircraft_orientation}
+\begin{figure}[htbp!]
+\centering
+\includegraphics [width=0.5\textwidth]{images/dti.eps}
+\caption{Revealing the \emph{corpus callosum} in a DVR of a set of DTI tracts.}
+\label{fig:dti}
 \end{figure}
 
-\end{comment}
 
+\subsection{Brain fibers: Uncluttering the bridge}
+\label{sec:dti}
+%
+Finally, we consider a last example related to the exploration of fiber tracts visualized as streamlines of the major eigenvector of a diffusion tensor imaging (DTI) field. Such datasets shows a spatially complex structure which makes them hard to explore\,\cite{assaf08}. In particular, fiber tracts are spread volumetrically over the entire extent of the brain, and create tangled patterns which make it very hard to see deep within the emerging structures. DVR techniques are often used to render such fiber tracts, one of the advantages being that close fibers get visually `merged' to reveal spatially coherent structures, an effect which is not possible when fibers are rendered using polyline (streamline-like) representations. However, DVR methods also create more occlusion, thus difficulties in seeing structures deep within the volume.
 
+For this use-case, we use an $128\times128\times51$ DTI volume ( same dataset as in~\cite{everts15}). From this volume, we traced 150352 fibers seeded in, and going over, regions of high fractional anisotropy. Next, we filtered out fibers shorter than 2mm, yielding a total of 120593 fibers to display (6.4M sample points). Next, we converted this fiber-set to a $512^3$ density volume, using kernel density estimation with a 3D isotropic kernel of radius 15 pixels. The conversion process is identical to the one used for the streamlines in Sec.~\ref{sec:flow}. Figure~\ref{fig:dti}a shows the result, rendered with DVR, with a simple opacity function mapping the fiber density. While terminal fibers are well visible, it is impossible to discern anything inside the volume. Activating the lens in the middle of the volume opens a hole through which a small bart of the \emph{corpus callosum}, the fiber bundle wrapping the bridge that connects the two emispheres, becomes visible. To obtain an even better view hereof, we slightly decrease the opacity (Fig.~\ref{fig:dti}c). The \emph{corpus callosum} is now clearly visible, appearing as a compact structure, due to the KDE blending of neighbor fibers. Note that obtaining such a view on the \emph{corpus callosum} using only DVR would be very hard, since transfer functions would either render separated (non-merged) fibers, or else make the fibers surrounding the structure of interest too thick and occluding. 
+
+%

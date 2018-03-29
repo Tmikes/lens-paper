@@ -11,6 +11,12 @@ J.~Alvina, C.~Appert, O.~Chapuis, and E.~Pietriga.
 }{.}\hspace{.4pt}2598200}}
 
 
+\bibitem{assaf08}
+Y.~Assaf and O.~Pasternak.
+\newblock Diffusion tensor imaging ({DTI})-based white matter mapping in brain
+  research: A review.
+\newblock {\em Journal of Molecular Neuroscience}, 34(1):51--61, 2008.
+
 \bibitem{brambilla2012illustrative}
 A.~Brambilla, R.~Carnecky, R.~Peikert, I.~Viola, and H.~Hauser.
 \newblock Illustrative flow visualization: State of the art, trends and
@@ -125,6 +131,13 @@ N.~Elmqvist and P.~Tsigas.
 }{.}\hspace{.4pt}2008\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}59}}
 
+
+\bibitem{everts15}
+M.~H. Everts, E.~Begue, H.~Bekker, J.~B. T.~M. Roerdink, and T.~Isenberg.
+\newblock Exploration of the brain's white matter structure through visual
+  abstraction and multi-scale local fiber tract contraction.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  21(7):808--821, 2015.
 
 \bibitem{ddh}
 M.~H. Everts, H.~Bekker, J.~Roerdink, and T.~Isenberg.
