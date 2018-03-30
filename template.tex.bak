@@ -176,6 +176,7 @@ To develop this technique, we used a GPU accelerated ray-casting framework with 
 %\bibliographystyle{abbrv-doi-hyperref}
 %\bibliographystyle{abbrv-doi-hyperref-narrow}
 
+\newpage
 \bibliography{template}
 \end{document}
 
