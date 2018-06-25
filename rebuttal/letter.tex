@@ -68,21 +68,21 @@ The Authors\\
     
     
     The initial requirement of the target to be 'partially visible' for the
-    technique to work weakens the uniqueness of the paper. How does the technique
+    technique to work weakens the uniqueness of the paper. 
+    
+    \rr{Actually, the target does not need to be partially visible; it \textbf{helps} if this is the case, since one can then de-occlude and bring-in-focus such a target very easily but, as the DTI use-case shows (Sec. 5.5), the target does not need to actually be visible. One can point the lens at some location in the 2D rendered image and `dig' to some arbitrary/desired depth with it. We made this point clear(er) in that section and the discussion, this was indeed not clear in the original paper.}\\
+    
+    How does the technique
     differentiate between 'target feature' and 'occluding regions', that is to say,
     how is spatial connectivity resolved?
-
-    Strengths:
-    The paper explores an interesting application of existing techniques for the
-    visualization of occluded targets in volumetric datasets. Furthermore, the idea of
-    interactively modifying exploration parameters, such as transfer function,
-    lighting, zoom, and rotation, limited within the target lens is (to the best of my
-    knowledge) new work. The attempt to recognize the requirements for occlusion
-    management techniques is plausible.
+    
+    \rr{TBD ???}\\
 
     The fact that the paper focused on the claim that the technique is novel (which is
     not the case) reflects my score. However, if the authors write it as an
     application paper, I will be inclined towards accepting the paper.
+    
+    \rr{TBD: Do we want to do this really?}
 
     The authors' contribution as a 'technique' (Focus+Context and lens-based
     distortion) are well-studied techniques and not novel. However, the application of
@@ -91,20 +91,15 @@ The Authors\\
     modifying exploration parameters, such as transfer function, lighting, zoom, and
     rotation, limited within the target lens is (to the best of my knowledge) new
     work.
+    
+    \rr{See above. Maybe we can fix this by calling the whole thing a refinement of a lens technique, or something like that; I don't quite get where the problem is, since R2 already says there are new technical elements, so.. where's the problem?}\\
 
     Secondly. the paper is lacking formal justification of their work by comparing
-    their results to existing methods. For example, "View-Dependent Peel-Away
-    Visualization for Volumetric Data", "A Deformation Framework for Focus+Context
-    Flow Visualization", "Virtual Retractor: An Interactive Data Exploration System
-    Using Physically Based Deformation", "GlyphLens: View-dependent Occlusion
-    Management in the Interactive Glyph Visualization", "Illustrative Deformation for
-    Data Exploration", to cite but a few. The authors have done an extensive
-    background study and they should have selected one state-of-the-art from each
-    specific scenario and discussed how their technique is more effective than the
-    state-of-the-art in section 5. The authors identify 4 requirements for occlusion
-    management and therefore, one form of comparison could be how the existing methods
-    lack one or several of the requirements and how the technique proposed in this
-    paper fulfill all. Since the paper claims that the technique could be applied to
+    their results to existing methods. [...]
+    
+    \rr{We addressed this in the revision by adding a summary table listing requirements \emph{vs} selected relevant F+C techniques (see Sec. 2.3 and related comment of R1). Also, we outlined here the amount of similar comparisons done by existing F+C papers. This way, we hope that our relative position (both in contributions and amount of comparison) with respect to existing work is more clear.}\\
+    
+    Since the paper claims that the technique could be applied to
     general datasets (and shown in section 5), the authors need to justify how their
     technique is better than the specific scientific visualizations resolving for
     occlusions.
