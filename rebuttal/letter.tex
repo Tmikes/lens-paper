@@ -72,18 +72,6 @@ The Authors\\
     
     \rr{Actually, the target does not need to be partially visible; it \textbf{helps} if this is the case, since one can then de-occlude and bring-in-focus such a target very easily but, as the DTI use-case shows (Sec. 5.5), the target does not need to actually be visible. One can point the lens at some location in the 2D rendered image and `dig' to some arbitrary/desired depth with it. We made this point clear(er) in that section and the discussion, this was indeed not clear in the original paper.}\\
     
-    How does the technique
-    differentiate between 'target feature' and 'occluding regions', that is to say,
-    how is spatial connectivity resolved?
-    
-    \rr{TBD ???}\\
-
-    The fact that the paper focused on the claim that the technique is novel (which is
-    not the case) reflects my score. However, if the authors write it as an
-    application paper, I will be inclined towards accepting the paper.
-    
-    \rr{TBD: Do we want to do this really?}
-
     The authors' contribution as a 'technique' (Focus+Context and lens-based
     distortion) are well-studied techniques and not novel. However, the application of
     these existing techniques for the visualization of occluded targets in volumetric
@@ -121,215 +109,163 @@ The Authors\\
     
     - Revise the subsection "Opacity" in Sec 3.3. Why did you choose 150 points? 
     
-    \rr{Explanation added in the text. We tried, indeed, with various values; higher
+    \rr{Explanation added in the text. We tried, indeed, with various values; higher...}
     
-    For
-    voxels having similar densities how will the voxels outside B become 'transparent'
-    for $TF_global$? Needs more explanation. If you change the $TF_global$ set by the
+    For voxels having similar densities how will the voxels outside B become 'transparent'
+    for $TF_{global}$? Needs more explanation. If you change the $TF_{global}$ set by the
     user, then you violate the consistency of the global context.
+    
+    \rr{The explanation was not clear. What happens is that we \textbf{never} change the user's $TF_{global}$ outside the lens (as the original text actually said). We only make the effective transfer function used \textbf{inside} the ball $B$ to be more opaque as one approaches the center of the ball $B$. This way, even if the user set a $TF_{global}$ which makes things outside of $B$ quite transparent, within and close to $B$'s center we make structures increasingly more opaque. This way, we are sure that items in the lens will never get so transparent as to be hard to see (which would defy the purpose of the lens). We adapted the explanation accordingly.}\\
 
-    - Link each subsection of Section 3 to Fig 2 for a diagrammatic explanation
+    Link each subsection of Section 3 to Fig 2 for a diagrammatic explanation.
+    
+    \rr{Good idea, done. We also added the final step of local lighting and viewing direction adjustments to the pipeline.} 
 
 \section{Review 2}
-
-The authors proposed a technique that deforms sampling rays in a raycasting
-    renderer to route the rays around occluders. The strengths of this technique is
-    that it is generally applicable to various volumetric data sets, and that it
-    incurs very low performance overhead over existing raycasting algorithms. The
-    weaknesses would be the requirement that the target be at least partially visible,
-    and that the context region is greatly disturbed such that much information is
-    lost. The authors discussed both points in the text.
 
     Their implementation appears to work for the demonstrated use cases. The authors
     claim that the design of the lens makes ray parameters easy to manipulate, but the
     user feedback is too sparse to support their claim. In addition, there is no
     comparison with prior focus+context methods in the described use cases.
+    
+    \rr{To address this, we added a user study to being more evidence to the ease of use and general user feedback for one of the five discussed
+    use cases (Sec. 5.1).}\\
 
-  The Review
-
-    The authors presented a novel technique: a lens for routing sampling rays around
-    occluders to reach the target. The target must be partially visible, and the
-    visible part is used for initializing the lens parameters. The parameters are
-    adjustable by the user in real time. Their technique is demonstrated to work with
-    various types of volumetric data sets.
-
-    The paper is easy to understand. The description of the technique is detailed
-    enough to be reproducible. The figures and the supplemental video describe well
-    the technical detail and the user interface.
-
-    However, there are some important issues that remain to be addressed. First, the
-    authors claim the proposed technique meets 4 requirements, but the requirements
+    First, the authors claim the proposed technique meets 4 requirements, but the requirements
     are not stated in enough detail. As such, it becomes confusing when prior work is
-    discussed in the framework of these requirements. Second, the use case evaluation
-    relies too much on insufficient user feedback. If a full user study is not
-    possible, then there should be other forms of evaluation. The technical novelty is
-    slightly limited due to following an existing paradigm of deforming sampling rays.
-    Therefore, it is important to evaluate the system as a whole.
-
-    Revisions required:
+    discussed in the framework of these requirements. 
+    
+    \rr{Agree. TBD: refine reqs}\\
+    
+    Second, the use case evaluation relies too much on insufficient user feedback. If a full user study is not
+    possible, then there should be other forms of evaluation. 
+    
+    \rr{Agree, we can do better. See the added user study referred to above.}\\
+    
     1. Please clearly explain the 4 requirements R1 through R4 before evaluating prior
     work under these criteria. Specific points as follows:
     1a. It is not clear if R1 emphasizes "unobstructed" or "rapidly". Also, is it
     rapid due to a good user interface (in which case a user study might be needed to
     substantiate the claim), or is it due to computational performance?
+
     1b. R2 needs to be justified: Why is it desirable to be able to change *all*
     parameters?
+
     1c. R3 is confusing because "global" could include both focus and context,
     therefore the meaning of "global context" is not clear.
+
     1d. R4 can be better re-stated as handling datasets where targets and occluders
     can not be separated by transfer functions, which may depend on more than
     densities.
+
+    \rr{TBD!}\\
+
     2. Regarding R3 and the preservation of the context: In the proposed method, the
     user is sometimes required to peel away the context by adjusting transfer
     functions until there is a line of sight to the target, as is shown in the
     supplemental video. This does not preserve the context. There should be a
     justification on how this adjustment does not violate R3, or there should be a
     discussion in the limitations subsection.
+    
+    \rr{As explained above (see the comments for R1), we do not necessarily need to see a part of the target to activate/use the lens. This use-case is however the most interesting, we believe, so this is why we focused mainly on it (Secs. 5.1-5.4). However, as explained, one can activate/use the lens to `dig' in a volume even at some location where there is originally nothing visible like a fragment of some target. This is the use-case in Sec. 5.5. We added these explanations to Sec. 5.5 and the discussion and also adapted the introduction and abstract to reflect this clearer.}\\
+    
     3. The user feedback described in section 5 is not enough to substantiate the
-    claim that the poposed technique works rapidly and is easy to use. Either the
+    claim that the proposed technique works rapidly and is easy to use. Either the
     claims need to be adjusted, or formal user studies need to be conducted.
     3a. Indeed only 3 out of 5 use cases have user feedback, and the other 2 lack
     evaluation.
+    
+    \rr{Correct. As explained also in response to R1, we (a) softened the claims where we cannot make them hard, and (b) added a user study for the baggage inspection scenario. While not exhaustive (no user study will probably be when evaluating and end-to-end application..), this brings more support to our claims.}\\
+    
+    
     4. If space permits, the prior work and the requirements they meet should be
     organized as a table.
+    
+    \rr{Good idea (!) We added this table to Sec. 2.3.}\\
+    
     5. The scattered rays intersect un-distorted rays outside of the lens. This
     potentially causes duplicate sampling. Please explain if this is an issue, and how
     it is supressed.
+    
+    \rr{This is indeed potentially the case. We did not notice any visible artifacts in our usage of the lens (nor did the 8 airport security experts, plus 2 medical specialists, plus the air-traffic controller expert, who used our tool) which can be ascribed to such `crossing' rays. The explanation can be in the fact that (a) the number of crossings (voxels samples by 2 or more crossing rays) is small and (b) the compositing TF being used essentially low-pass filters the potential artifacts. We added a comment to this end.}
+    
     6. Section 5 is too verbose for its content. Long paragraphs should be reorganized
     into shorter, more focused ones.
+    
+    \rr{Agree, shortened/compacted.}\\
+    
     7. Missing relevant prior work to which the proposed approach should be
     contrasted:
     "A curved ray camera for handling occlusions through continuous multiperspective
     visualization. Cui et al., 2010"
     "Multiperspective Focus+Context Visualization, Wu et al., 2016"
-    
+
+    \rr{TBD}\\    
     
 
 \section{Review 3}
 
-A nice but limited contribution which is somewhat curtailed by existing work in
-    the literature. There are some missing citations that need to be rectified, but
-    overall, this is solid work.
-
-  The Review
-
-    This work proposes a focus+context technique for eliminating occlusion in a
-    volumetric data visualization where the user simply defines a position, size, and
-    depth for a cylindrical cutout area. The contents of the lens can be modified,
-    including field of view, direction, lighting, etc, allowing for additional
-    utility.
-
-    The idea is properly motivated, with the requirements of the new technique
-    elicited into four specific requirements (R1-R4). This makes a lot of sense.
-
     However, while the coverage of the related work generally is fair and equitable, I
     do find that some of the existing occlusion management techniques have not been
-    properly covered. For example, the paper brushes X-ray techniques aside, but
-    Coffin's perspective cut-away views (3DUI 2006) is quite relevant to this work, as
-    is Elmqvist's dynamic transparency (INTERACT 2007). Similarly, while MoleView is
-    cited, 3D explosion probes such as Sonnet's (AVI 2004) or McGuffin's (VIS 2003,
-    cited) also deserves mention, particularly because this explosion idea is so
-    central to this work. There is more on 3D explosion in the virtual reality
-    literature, where such ideas have interactive appeal.
-
-    Given this literature, which is relatively ample, my feeling is that this paper is
-    novel solely because of its "flexible and real-time interactive modification of
-    the focal point", which is a novel and powerful idea. The idea of using screen-
-    space raycasting to determine the hole to push through the surface, as well as the
-    selection of a visible part of the target to determine where to place the focal
-    point, is interesting as well. These are relatively small contributions, but to my
-    knowledge they extend the state of the art in a quantifiable way. One question
+    properly covered [...]
+ 
+    \rr{Indeed, the reviewer is right, there are more papers in this area. We had to somehow choose a balance between size (of the related work section) and level of detail. We have added the citations suggested by the reviewer to the discussion of related work.}\\
+    
+    One question
     which is not fully discussed in this paper is if it ever would make sense to
     decouple the viewpoint from the lens? At least, it seems an academically
     interesting exercise, perhaps only for demonstrating the work in the paper, but I
     didn't see it mentioned.
-
-    Validation here is performed in five application scenarios where the prototype
-    implementation is employed for different example datasets. This is reasonable and
-    shows the utility of the work. Unfortunately, the companion video with the paper
-    only shows two of these examples---all five would have been better.
-
-    Overall, the paper is well written and easy to follow, with just the amount of
-    necessary mathematical formalism to explain the idea. The illustrations are nice,
-    as are the screenshots.
-
-    In summary, this is a nice paper with a small but reasonable contribution---small,
-    because virtually all of the ideas except the local lens controls are already
-    present in the literature. Despite this limitation, I lean towards a positive
-    verdict of the work, as it fills an important and useful gap in the literature.
-    For this reasons, the "required changes", were the paper to be conditionally
-    accepted, must be rather limited: mainly, the authors are encouraged to add the
-    missing literature I mentioned above, and potentially add all five examples to the
-    video.
     
+    \rr{Yes (!) Actually we toyed with this idea during the various design/implementation stages of the lens. It is not that this cannot be easily implemented. The problem is that we found it confusing (in terms of usage), and one of our `silent' requirements was to have a simple interaction design. Yes, this can be done, but it does not seem (at least, if we understand correctly what the reviewer had in mind) to really add significant flexibility atop of the already existing mechanisms, see especially the local viewpoint change. We thought of adding this to the discussion, but given the space limits, and the other more pressing concerns we saw in the reviews, we think that we'd better dedicate the available space to the other concerns.}\\
+    
+    Unfortunately, the companion video with the paper
+    only shows two of these examples---all five would have been better.
+    
+    \rr{We feel there is a soft limit to what a watchable video (for this type of paper) would be, and there are also size constraints to the additional material submission (at least, if we want a good quality). We surely see the point, but explaining in sufficient detail what all five use-cases really are and want to achieve in a self-contained video seems to be just a bit too much, so this is why we chose to stay with only two use-cases. We hope the reviewer understands our choice and will not see this adversely (!)}\\
     
 
 \section{Review 4}
 
-<b>3 - Possible Accept</b><br/> The paper is not acceptable in its current state,
-    but might be made acceptable with significant revisions within the conference
-    review cycle.<br/>If the specified revisions are addressed fully and effectively I
-    may be able to return a score of '4 - Accept'.
-
-  Supplemental Materials
-
-    Acceptable
-
-  Justification
-
-    This paper presents a new focus+context method that allows a user to quickly
-    select a focal point on a partially visible object, with the "lens" performing
-    local deformation to increase visibility of that obstructed object.
-
-    While there are small contributions to the state-of-the-art in this area, the
-    authors do not focus on emphasizing that. Instead, the authors dedicate the
-    majority of the paper to case studies which justify the use of a focus+context
-    technique to reveal hidden structures (but without focusing on why this particular
-    method is better than any others). The authors do admit that a comparative study
+    The authors do admit that a comparative study
     is outside the scope of this paper (due to the complexity of having an
     implementation of multiple methods to work with). However, the authors do not
     perform enough basis analysis (from principals presented in the papers) to show
     the advantages of this proposed method over previous work.
-
-    With significant revisions I think the authors could do a better job of
-    emphasizing the novel aspects of their technique, in order to convince the reader
-    that this version of a lens is the best option for certain visualization
-    situations. With these revisions this paper would be suitable for publication.
-
-  The Review
-
-    This paper presents a new focus+context method for viewing hidden objects that
-    works quickly after the user has selected an area of interest.
-
-    Overall, there are interesting aspects to this method. However they are lost in
-    the long, detailed case studies which don't necessarily highlight the advantages
-    of this particular method (over any other focus+context method).
-
+    
+    \rr{This is a hard but fair point, we of course have thought about it. The key problem was/is not so much the time or effort, but being \textbf{sure} we could reimplement existing F+C techniques (at least, state of the art ones which are the most relevant for comparing against) is not just time consuming, but it is often just not doable because there are so many `implementation-level' details missing in their description. That is: we could choose indeed technique X or Y from the literature and aim to replicate it, but especially for interactive-lens techniques, this is extremely hard, since there are usually many details being glossed over. As such, how would we know we are `really' replicating technique X or Y in our implementation? And, if we did some mistakes in our implementation (as opposed to the original X or Y), how can we then justify that our evaluation of X or Y leads to unsatisfactory results? Would we then evaluate the inherent limitations of X or Y, or our interpretation of how they are to be implemented? This, we believe, is a great(er) problem of evaluation in interactive infovis, for which we do not have a ready answer. But this is a very fair point. We mention it explicitly in the discussion section.}\\
+    
     In section 4 the authors indicate that they used a compositing ray function but
     that any other ray function could be used instead. I am not sure that is true -
     this wouldn't necessarily (or at least not obviously) work with something like
     minimum / maximum intensity projection.
+    
+    \rr{Indeed, we cannot claim \textbf{any} other ray function would be directly usable (though, we do not see why not, since all we do is modify the paths of the rays, and not how encountered voxels are treated along such a ray). But, since we indeed have no formal proof this is the case, we removed the respective claim from Sec. 4.}\\
 
 
-    Revisions required:
-
-    - The authors should significantly expand their definitions of the requirements R1
+    The authors should significantly expand their definitions of the requirements R1
     through R4. Currently these are covered only in passing in the introduction with
     very vague definitions (what is rapid? what is easy? what are the parameters?)
+    
+    \rr{TBD}\\
 
-    - The authors need to revisit these four requirements at some point in the paper
+    The authors need to revisit these four requirements at some point in the paper
     to show how this newly proposed method meets all the requirements yet prior
     methods fail for one or more of these requirements.
+    
+    \rr{This is done in two parts. First, we added a summary table of relevant related methods and how they behave vs the listed requirements (see earlier comments to R1..R2). Secondly, the way that our method relates to R1..R4 is discussed in Sec. 6 (discussion).}\\
 
-    - Overall, the organization of the paper is a bit odd. Important concepts (such as
+    Overall, the organization of the paper is a bit odd. Important concepts (such as
     the requirements) are covered only in the Introduction, and the advantages to the
     proposed method are covered in the section on Related Work (before the method is
     formally presented).  The paper organization should be revised to help clearly
     convey (and identify!) the important information in the expected sections (no one
     expects that an idea covered in just one sentence in the introduction is key to
     the paper).
+    
+    \rr{We did not see how else we can introduce requirements else than before discussing the related work, since the related work is to be reflected vs the requirements. As such, requirements have to be listed before the related work, either in the beginning of Sec. 2 or in Sec. 1. We believe it is better to do this in Sec. 1 so as to make the scope of the paper clearer (otherwise, we cannot state in Sec. 1 what we aim to achieve). The advantages of our method are indeed listed in Sec. 2 so as to contrast what we aim to do vs related work (otherwise Sec. 2 would look like a passive enumeration of papers, and it would not be clear what we are aiming to improve upon that). However, we also re-discuss our work vs the requirements in the discussion section (Sec. 6), when the reader already knows the proposal. However, we fully agree that the requirements listing in Sec. 1 was too brief, so we refined this, in line with comments from other reviewers too.}\\
 
-    - Much of the paper is devoted to covering five case studies in detail. These are
+    Much of the paper is devoted to covering five case studies in detail. These are
     great - but do not clearly convey how this particular method is better than any
     other F+C method. I realize that a full comparison would require an implementation
     of several other methods and a user study (rather than just something closer to a
@@ -337,6 +273,8 @@ A nice but limited contribution which is somewhat curtailed by existing work in
     time frame). However, in each of these case studies the authors should point out
     how some novel aspect of this method was critical to the successful visualization
     of the hidden object.
+    
+    \rr{We think we are doing this (and we have tried to improve upon this), as follows. Briefly put, we can do two types of evaluation: (1) an `absolute' one where we show that our method covers well the goals/constraints of some task; or a `relative' one where we show that our method does better than similar methods for a given task. As mentioned earlier (also see comments for other reviewers, and our added text in the discussion section), doing (2) simply requires we have access somehow to a correct and complete implementation of competing methods. As explained earlier, this is unfortunately not the case (and replicating such methods is not just complex, but risky, since details are missing, so we may just produce a suboptimal or even wrong implementation which would lead us to the wrong evaluation conclusions). As such, we can only do (1), which is what we do in the five use-cases in Sec. 5. We refined such insights by adding one detailed user evaluation for the baggage inspection use-case (Sec. 5.1). As stated earlier in this letter, we are fully aware this is not a bulletproof evaluation, but we believe it adds more evidence to the added-value of our proposal in the context of a (1)-type evaluation.}\\
 
 
 \end{document}
