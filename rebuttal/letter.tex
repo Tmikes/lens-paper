@@ -103,19 +103,27 @@ The Authors\\
     general datasets (and shown in section 5), the authors need to justify how their
     technique is better than the specific scientific visualizations resolving for
     occlusions.
+    
+    \rr{We are not sure what the `specific scientific visualizations' here refer to. If these are alternative visualization techniques that aim to look at the same datasets we consider (to treat the same use-cases), then we believe that we do this, see our comment with respect to the comparisons for R1.}\\
+    
     A minor point: even though the authors have had discussions with experts in the
     field for each application scenario (section 5), a formal user study between
     different methods and their technique would strengthen the paper's claims.
+    
+    \rr{In this direction, we added a (more) formal user evaluation for the baggage inspection use-case (Sec. 5.1) to the revised paper.}\\
 
-    Revision Required:
     One major change that could really strengthen the paper would be to eliminate the
     need for the target to be 'partially visible'. If the user is able to 'poke a
     hole' into the volume and scroll through the volume to fix a target, it would
     greatly add to the paper's contribution.
     
-    ALEX: Yes, but this is what we can really do, cannot we?? See the DTI example.
-
-    - Revise the subsection "Opacity" in Sec 3.3. Why did you choose 150 points? For
+    \rr{Actually, this was already possible from the very beginning (!), see the comments above related to the DTI use-case (Sec. 5.5), which are precisely this situation. It seems we didn't explain this clearly, but opening a hole to see the corpus callosum is done just this way. We rewrote that part of the text and the discussion to explain this.}\\
+    
+    - Revise the subsection "Opacity" in Sec 3.3. Why did you choose 150 points? 
+    
+    \rr{Explanation added in the text. We tried, indeed, with various values; higher
+    
+    For
     voxels having similar densities how will the voxels outside B become 'transparent'
     for $TF_global$? Needs more explanation. If you change the $TF_global$ set by the
     user, then you violate the consistency of the global context.
