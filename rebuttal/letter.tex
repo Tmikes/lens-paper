@@ -47,14 +47,27 @@ The Authors\\
 
 \section{Review 1}
 
-
-Most important issues:
     The authors' contribution as a 'technique' is not novel. Focus+Context and lens-
-    based distortion are well-studied techniques. Furthermore, the paper discusses the
+    based distortion are well-studied techniques. 
+    
+    Furthermore, the paper discusses the
     application of their 'technique' in different scenarios with different types of
     datasets, however, there lacks a comparison (pictorial or quantitative) to justify
     why their method is more effective than the already existing techniques for each
-    scenario. The initial requirement of the target to be 'partially visible' for the
+    scenario. 
+    
+    \rr{Indeed, we do not present pictorial or quantitative comparisons with existing techniques for \textbf{all} the five use-cases. As also R4 noted, this would be unfeasible (both with respect to the revision time-frame but, equally or even more importantly, given the fact that implementations of many related F+C techniques that would fit the respective use-cases and datasets are not readily available). However, we do provide various types of comparisons, as follows. 
+    \begin{itemize}
+    \item For the baggage inspection (Sec. 5.1), we executed an user evaluation in the revision time-frame and added its qualitative and quantitative results to the respective section.
+    \item For the 3D fluid simulation (Sec. 5.2), we mention that the circular vortex that we found with our lens was not found by five techniques that we are aware of which used the same dataset (see references in the text). One of them (added in the revision) is actually also a F+C technique. Of course, this is only indirect evidence; however, we believe it supports at least partially the claim that our technique was useful in discovering something unknown in a well-known standard dataset widely used in 3D fluid flow visualization.
+    \item For the CT chest tumor use-case (Sec. 5.3), we have had two medical specialists (radiologist and pulmonologist) use two techniques for the same type of problem (slices and classical DVR) and compare them with our lens technique. They commented on the added-value of the lens technique. We fully agree that this is indirect evidence (since they did not use another lens technique, but non-lens techniques only). 
+    \item For the air trails use-case (Sec. 5.4), we used FromDaDy, which also includes F+C and filtering techniques, to isolate the eight-shaped trail outlier, and explained in the text that the new lens is more effective than such techniques. We fully agree that this is only qualitative evidence only.
+    To clarify this point, we added extra explanations as to the limitations of the comparison in the text, especially in the discussion section.
+    \end{itemize}
+    }
+    
+    
+    The initial requirement of the target to be 'partially visible' for the
     technique to work weakens the uniqueness of the paper. How does the technique
     differentiate between 'target feature' and 'occluding regions', that is to say,
     how is spatial connectivity resolved?
@@ -70,8 +83,6 @@ Most important issues:
     The fact that the paper focused on the claim that the technique is novel (which is
     not the case) reflects my score. However, if the authors write it as an
     application paper, I will be inclined towards accepting the paper.
-
-  The Review
 
     The authors' contribution as a 'technique' (Focus+Context and lens-based
     distortion) are well-studied techniques and not novel. However, the application of
