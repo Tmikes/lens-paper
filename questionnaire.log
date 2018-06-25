@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.31)  25 JUN 2018 18:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.31)  25 JUN 2018 18:38
 entering extended mode
 **./questionnaire.tex
 (questionnaire.tex
@@ -490,7 +490,7 @@ Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
 . Defining command \xshowbibdriver with sig. 'm' on line 193.
 .................................................
 )
-No file questionnaire.aux.
+(questionnaire.aux)
 \openout1 = `questionnaire.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
@@ -506,7 +506,7 @@ LaTeX Font Info:    ... okay on input line 71.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
 LaTeX Font Info:    ... okay on input line 71.
 LaTeX Font Info:    Try loading font information for U+msa on input line 79.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 79.
@@ -543,29 +543,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--100
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-
- []
-
 [1
 
 {C:/Users/michael/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 105--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--116
+
+ []
+
 [2]
 This exam contains 0 questions with 0 parts, 0 subparts, and 0 subsubparts.
-
-Class exam Warning: Point totals have changed. Rerun to get point totals right.
-
-
 (questionnaire.aux) ) 
 Here is how much of TeX's memory you used:
- 10431 strings out of 493312
- 201663 string characters out of 3138893
+ 10433 strings out of 493312
+ 201725 string characters out of 3138893
  245872 words of memory out of 3000000
  14005 multiletter control sequences out of 15000+200000
  532576 words of font info for 32 fonts, out of 3000000 for 9000
@@ -575,7 +570,7 @@ Here is how much of TeX's memory you used:
 m/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb
 >
-Output written on questionnaire.pdf (2 pages, 41245 bytes).
+Output written on questionnaire.pdf (2 pages, 42161 bytes).
 PDF statistics:
  21 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
