@@ -4,44 +4,44 @@ The top-level auxiliary file: template.aux
 The style file: abbrv-doi.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: template.bib
-You've used 47 entries,
+You've used 50 entries,
             2598 wiz_defined-function locations,
-            906 strings with 13723 characters,
-and the built_in function-call counts, 57180 in all, are:
-= -- 13995
-> -- 871
-< -- 2240
-+ -- 2575
-- -- 323
-* -- 1559
-:= -- 7718
-add.period$ -- 147
-call.type$ -- 47
-change.case$ -- 287
+            924 strings with 14292 characters,
+and the built_in function-call counts, 59108 in all, are:
+= -- 14334
+> -- 925
+< -- 2283
++ -- 2639
+- -- 342
+* -- 1657
+:= -- 8006
+add.period$ -- 157
+call.type$ -- 50
+change.case$ -- 305
 chr.to.int$ -- 0
-cite$ -- 47
-duplicate$ -- 659
-empty$ -- 1487
-format.name$ -- 294
-if$ -- 16137
+cite$ -- 50
+duplicate$ -- 702
+empty$ -- 1584
+format.name$ -- 312
+if$ -- 16616
 int.to.chr$ -- 0
-int.to.str$ -- 47
-missing$ -- 46
-newline$ -- 407
-num.names$ -- 94
-pop$ -- 279
+int.to.str$ -- 50
+missing$ -- 49
+newline$ -- 427
+num.names$ -- 100
+pop$ -- 293
 preamble$ -- 1
-purify$ -- 241
+purify$ -- 256
 quote$ -- 0
-skip$ -- 483
+skip$ -- 514
 stack$ -- 0
-substring$ -- 3598
-swap$ -- 165
-text.length$ -- 1190
+substring$ -- 3735
+swap$ -- 175
+text.length$ -- 1214
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 186
+type$ -- 198
 warning$ -- 0
-while$ -- 226
-width$ -- 49
-write$ -- 1782
+while$ -- 239
+width$ -- 52
+write$ -- 1843
