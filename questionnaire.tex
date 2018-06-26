@@ -1,0 +1,120 @@
+\documentclass[a4paper]{exam}
+\usepackage{amssymb}
+\usepackage{array,longtable}
+
+\newcounter{mquestion}
+\newcounter{row}
+
+\makeatletter
+\newtoks\@tabtoks
+\newcommand\addtabtoks[1]{\@tabtoks\expandafter{\the\@tabtoks#1}}
+\newcommand*\resettabtoks{\@tabtoks{}}
+\newcommand*\printtabtoks{\the\@tabtoks}
+\makeatother
+
+\newcommand\CheckTable[1]{%
+  \setcounter{mquestion}{0}
+  \setcounter{row}{0}
+  \resettabtoks
+  \loop\ifnum\therow<#1\relax
+    \stepcounter{row}
+    \addtabtoks{& $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\}%
+  \repeat
+  \begin{longtable}{>{\stepcounter{mquestion}}l*{5}{c}}
+    \multicolumn{1}{c}{} & Very poor & Poor & Neutral & Good & Very good \\
+    \printtabtoks
+  \end{longtable}%
+}
+
+
+\newcommand\CheckTablelevel[1]{%
+  \setcounter{mquestion}{0}
+  \setcounter{row}{0}
+  \resettabtoks
+  \loop\ifnum\therow<#1\relax
+    \stepcounter{row}
+    \addtabtoks{& $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\}%
+  \repeat
+  \begin{longtable}{>{\stepcounter{mquestion}}l*{5}{c}}
+    \multicolumn{1}{c}{} & Novice &  Adv. Beginner &  Competent & Proficient  & Expert \\
+    \printtabtoks
+  \end{longtable}%
+}
+
+\newcommand\CheckTableDifficulty[1]{%
+  \setcounter{mquestion}{0}
+  \setcounter{row}{0}
+  \resettabtoks
+  \loop\ifnum\therow<#1\relax
+    \stepcounter{row}
+    \addtabtoks{& $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\}%
+  \repeat
+  \begin{longtable}{>{\stepcounter{mquestion}}l*{5}{c}}
+    \multicolumn{1}{c}{} & Hard & Quite hard & Neutral & Quite easy & Easy \\
+    \printtabtoks
+  \end{longtable}%
+}
+
+
+\usepackage{xpatch}% http://ctan.org/pkg/etoolbox
+\xpatchcmd{\answerline}% <cmd>
+  {\par\nobreak\vskip\answerskip}% <search>
+  {}% <replace>
+  {}{}% <success><failure>
+
+\newcommand{\leftanswerline}[1][]%
+{\ifthenelse{\equal{#1}{}}%
+{\par\hspace{-1.3em}\begin{minipage}{1em}\answerline\end{minipage}}%
+{\par\hspace{-1.3em}\begin{minipage}{1em}\answerline[#1]\end{minipage}}%
+}
+
+\begin{document}
+
+\section{Information}
+
+ Age: ......... \newline
+ Profession: .................. \newline
+ Years of professional experience: ................ \newline
+ Familiarity with 3D tools: 
+\CheckTablelevel{1}
+
+\section{Scenario 1: Untargeted Exploration}
+Evaluate the level of difficulty to detect a hidden target (which is not partially visible) by activating the lens at various (random) 2D screen locations and next changing the depth of the lens:
+\CheckTableDifficulty{1}
+Comments:................................................................................ \newline \newline
+How do you estimate the value of this tool for this type of exploration/task?
+\CheckTable{1}
+Comments:................................................................................ \newline \newline
+Compared with traditional tools you know and use for the same task (scanners, X-ray machines), what is the perceived added value of this tool for this type of task?
+\CheckTable{1}
+Comments:................................................................................ \newline \newline
+
+\section{Scenario 2: Targeted Exploration}
+Evaluate the level of difficulty of using the lens to get details on a partially visible target, using all the explained lens' mechanisms.
+\CheckTableDifficulty{1}
+Comments:................................................................................ \newline \newline
+How do you estimate the value of this tool for this type of exploration/task?
+\CheckTable{1}
+Comments:................................................................................ \newline \newline
+Compared with traditional tools you know and use for the same task (scanners, X-ray machines), what is the perceived added value of this tool for this type of task?
+\CheckTable{1}
+Comments:................................................................................ 
+\section{Suggestions}
+
+
+Do you have any ideas for improving the tool? What would you like/need to see added to it?\newline
+
+Comments: \newline
+................................................................................................................ \newline
+................................................................................................................ \newline
+................................................................................................................ \newline
+
+\noindent Do you have ideas about additional scenarios or tasks from your work experience in which this tool would be useful? \newline
+
+Comments: \newline
+................................................................................................................ \newline
+................................................................................................................ \newline
+................................................................................................................ \newline 
+
+
+\end{document}
