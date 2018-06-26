@@ -33,12 +33,14 @@ Rezk-Salama and Kolb\,\cite{CGF:CGF979} also considered the voxels' occurrence o
 %
 An interactive lens is a lightweight tool to solve localized visualization problems by temporarily altering a selected part of the visual data representation\,\cite{CGF:CGF12871}, and hence provides focus-and-context (F+C) solutions to volumetric data occlusion (R2). Parametrizable lens properties include position, shape, appearance, size, orientation, and selection of included data (focus). The lens \emph{shape} is usually chosen to meet the requirements of the application and is linked to the lens function. Most lenses are circular\,\cite{1648236} (a design we also choose), rectangular\,\cite{Kincaid:2010:SFA:1907651.1907963}, or adapt their shape to the data-in-focus\,\cite{Pindat:2012:JCA:2380116.2380150,Thiede2008}. The lens \emph{position} and \emph{size} can be changed manually by the user, or autfomatically to guide users toward interesting events in the data\,\cite{Tominski:2011:ECU:2336207.2336211} or along a path of interesting events\,\cite{Alvina:2014:RER:2598153.2598200}. Our lens updates automatically its properties once a target has been selected. This allows a smooth transition towards an unobstructed and magnified area of interest.
 
-Lenses for DVR face spatial selection and occlusion challenges. Magic Lens\,\cite{1532818} addresses these by rendering occlusions with lower opacity and magnifying pre-computed features interactively or automatically in a pre-segmented dataset. This however does not provide an (interactive) way to deal with similar-density occluders and targets (R1,R4). GlyphLens\,\cite{7539643} removes occluding glyphs by pulling them aside through animation. However, this technique covers only 3D glyph-based volumetric visualizations. 
+Lenses for DVR face spatial selection and occlusion challenges. Magic Lens\,\cite{1532818} addresses these by rendering occlusions with lower opacity and magnifying pre-computed features interactively or automatically in a pre-segmented dataset. This however does not provide an (interactive) way to deal with similar-density occluders and targets (R4) and does not propose local exploration of the target context (R2). GlyphLens\,\cite{7539643} removes occluding glyphs by pulling them aside through animation. However, this covers only glyph-based and not DVR visualizations. 
 
 Lenses can create discontinuities between their inside and outside areas. Deformations can be a solution to this.
-Hsu et al.\,\cite{Hsu:2011:RFM:2070781.2024165} create flexible deformations by non-linearly sampled rays to smoothly project objects at multiple levels of detail. However, this is computationally expensive and far from real-time (R1). Bruckner and Gr{\"o}ller~\cite{4015467} proposed exploded views that partition the volume into several segments. Correa et al.\,\cite{Correa:2007:IDD:1313046.1313163,Correa:2006:FAV:1187627.1187827} allow one to manipulate the geometry of a data object. McGuffin et al.\,\cite{1250400} performed deformations using peeling to see hidden parts of the data. Such techniques have the issue of removing potentially important contextual information surrounding the target when trying to solve the local occlusion (R3).
+Hsu et al.\,\cite{Hsu:2011:RFM:2070781.2024165} create flexible deformations by non-linearly sampled rays to smoothly project objects at multiple levels of detail. However, this is computationally expensive and far from real-time (R1). Exploded views are used to partition a volume into several segments\,\cite{Sonnet:2004:IEA:989863.989871,4015467}. This strongly reduces occlusion but distorts the context (R3) and requires some sort of data pre-segmentation which takes time to compute (R1). Correa et al.\,\cite{Correa:2007:IDD:1313046.1313163,Correa:2006:FAV:1187627.1187827} allow one to manipulate the geometry of a data object. McGuffin et al.\,\cite{1250400} performed deformations using peeling to see hidden parts of the data. Such techniques remove potentially important contextual information surrounding the target, which makes it hard to see how the target is embedded in its context (R2).
 
 Deformations can reveal specific data features by using a precomputed segmentation. Tong et al. proposed a deforming lens which moves streamlines to observe the inner part of streamline bundles\,\cite{7332955}. Other techniques performed deformations using surgical metaphors\,\cite{4069230,Correa:2006:FAV:1187627.1187827} to show hidden parts of a volume. Such techniques do not offer tools for local manipulation of the viewpoint that allows seeing a target under multiple perspectives (R2) while keeping the global context. 
+
+Using non-straight-line rays is another way to avoid occluders. Cui \emph{et al.}\,\cite{cui10} propose curved (B{\'e}zier) rays to support this. Wu \emph{et al.}\,\cite{wu16} refine this further to create multi-perspective views. These approaches require a quite careful ray-path planning in advance, so they are not directly aimed at a lens effect (R2). Also, the target should be accessible from the viewpoint via a (possibly curved) path (R4). Also, from the presented examples, although two examples of DVR models are given, it seems these techniques mainly address de-occlusion in large 3D polygonal scenes such as terrain and city models.
 
 Table~\ref{tab:methods} summarizes the main advantages and limitations of a set of volumetric exploration techniques selected from the ones mentioned above which are close to our proposal. As visible, none of the techniques scores high on all requirements. The table also lists the number of different datasets and/or use-cases these techniques were tested on. We will validate our proposal on a similar number of use-cases (Sec.~\ref{sec:scenarios}).
 \begin{table}[htbp]
@@ -49,15 +51,15 @@ Table~\ref{tab:methods} summarizes the main advantages and limitations of a set 
 \textbf{Technique} & \textbf{R1} & \textbf{R2} & \textbf{R3} & \textbf{R4} & \textbf{Use-cases}\\
 \hline
 \hline
-Bruckner \emph{et al.}\,\cite{4015467} & + & -- & -- & + & 6\\
-Hsu \emph{et al.}\,\cite{Hsu:2011:RFM:2070781.2024165} & -- & +/- & + & + & 4\\
-Correa \emph{et al.}\,\cite{Correa:2006:FAV:1187627.1187827} & + & -- & + & + & 8\\
 McGuffin \emph{et al.}\,\cite{1250400} & + & -- & + & + & 1\\
-Hurter \emph{et al.}\,\cite{6787171} & + & +/- & + & -- & 6\\
+Sonnet \emph{et al.}\,\cite{Sonnet:2004:IEA:989863.989871} & +/- & -- & + & +/- & 5\\
 Wang \emph{et al.}\,\cite{1532818} & + & -- & + & +/- & 6\\
+Bruckner \emph{et al.}\,\cite{4015467} & +/- & -- & -- & + & 6\\
+Correa \emph{et al.}\,\cite{Correa:2007:IDD:1313046.1313163,Correa:2006:FAV:1187627.1187827} & + & -- & + & + & 8\\
 Cui \emph{et al.}\,\cite{cui10} & + & -- & + & -- & 5\\
-Wu \emph{et al.}\,\cite{wu16} & + & +/- & + & -- & 5\\
-Sonnet \emph{et al.}\,\cite{Sonnet:2004:IEA:989863.989871} & + & -- & + & +/- & 5\\
+Hsu \emph{et al.}\,\cite{Hsu:2011:RFM:2070781.2024165} & -- & +/- & + & + & 4\\
+Hurter \emph{et al.}\,\cite{6787171} & + & +/- & + & -- & 6\\
+Wu \emph{et al.}\,\cite{wu16} & + & -- & + & -- & 5\\
 \hline
 \end{tabular}
 \caption{Related work selection \emph{vs} requirements R1..R4 ('+': good, '+/-': average, '--': limited) and the number of use-cases (datasets) used to demonstrate these methods.}

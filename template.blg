@@ -6,15 +6,15 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: template.bib
 You've used 50 entries,
             2598 wiz_defined-function locations,
-            924 strings with 14292 characters,
-and the built_in function-call counts, 59108 in all, are:
-= -- 14334
+            920 strings with 14153 characters,
+and the built_in function-call counts, 55925 in all, are:
+= -- 13322
 > -- 925
-< -- 2283
-+ -- 2639
-- -- 342
-* -- 1657
-:= -- 8006
+< -- 2101
++ -- 2457
+- -- 340
+* -- 1644
+:= -- 7620
 add.period$ -- 157
 call.type$ -- 50
 change.case$ -- 305
@@ -23,11 +23,11 @@ cite$ -- 50
 duplicate$ -- 702
 empty$ -- 1584
 format.name$ -- 312
-if$ -- 16616
+if$ -- 15604
 int.to.chr$ -- 0
 int.to.str$ -- 50
 missing$ -- 49
-newline$ -- 427
+newline$ -- 416
 num.names$ -- 100
 pop$ -- 293
 preamble$ -- 1
@@ -35,13 +35,13 @@ purify$ -- 256
 quote$ -- 0
 skip$ -- 514
 stack$ -- 0
-substring$ -- 3735
+substring$ -- 3551
 swap$ -- 175
-text.length$ -- 1214
+text.length$ -- 1119
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 198
 warning$ -- 0
-while$ -- 239
+while$ -- 235
 width$ -- 52
-write$ -- 1843
+write$ -- 1743

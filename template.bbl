@@ -35,15 +35,7 @@ A.~Brambilla, R.~Carnecky, R.~Peikert, I.~Viola, and H.~Hauser.
 \bibitem{4015467}
 S.~Bruckner and M.~E. Gr{\"o}ller.
 \newblock Exploded views for volume data.
-\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
-  12(5):1077--1084, Sept 2006. doi: {{%
-10\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}1109\discretionary{/}{%
-}{/}Transactions on Visualization and Computer
-  Graphics\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}2006\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}140}}
-
+\newblock {\em IEEE TVCG}, 12(5):1077--1084, 2006.
 
 \bibitem{Burns:2008:ACC:1457515.1409107}
 M.~Burns and A.~Finkelstein.
@@ -159,12 +151,7 @@ M.~Griebel, T.~Preusser, M.~Rumpf, M.~A. Schweitzer, and A.~Telea.
 \bibitem{Hsu:2011:RFM:2070781.2024165}
 W.-H. Hsu, K.-L. Ma, and C.~Correa.
 \newblock A rendering framework for multiscale views of {3D} models.
-\newblock {\em ACM Trans. Graph.}, 30(6):131:1--131:10, Dec. 2011. doi: {{%
-10\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}1145\discretionary{/}{%
-}{/}2070781\hspace{.1pt}\discretionary{.}{%
-}{.}\hspace{.4pt}2024165}}
-
+\newblock {\em ACM Trans. Graph.}, 30(6):131:1--131:10, Dec. 2011.
 
 \bibitem{hurter2015image}
 C.~Hurter.
@@ -222,6 +209,13 @@ S.~Islam, D.~Silver, and M.~Chen.
 }{.}\hspace{.4pt}2007\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}48}}
 
+
+\bibitem{slicer}
+R.~Kikinis, S.~D. Pieper, and K.~Vosburgh.
+\newblock {3D Slicer}: A platform for subject-specific image analysis,
+  visualization, and clinical support.
+\newblock {\em Intraoperative Imaging Image-Guided Therapy}, 3(19):277--289,
+  2014.
 
 \bibitem{Kincaid:2010:SFA:1907651.1907963}
 R.~Kincaid.
@@ -307,13 +301,6 @@ B.~Preim, A.~Baer, D.~Cunningham, T.~Isenberg, and T.~Ropinski.
 }{/}cgf\hspace{.1pt}\discretionary{.}{%
 }{.}\hspace{.4pt}12927}}
 
-
-\bibitem{slicer}
-R.~K. R, S.~D. Pieper, and K.~Vosburgh.
-\newblock {3D Slicer}: A platform for subject-specific image analysis,
-  visualization, and clinical support.
-\newblock {\em Intraoperative Imaging Image-Guided Therapy}, 3(19):277--289,
-  2014.
 
 \bibitem{CGF:CGF979}
 C.~Rezk-Salama and A.~Kolb.
