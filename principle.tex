@@ -108,7 +108,7 @@ Separately, we use a slow-in/slow-out animation\,\cite{Dragicevic:2011:TDA:19789
 \section{Implementation}
 \label{sec:implem}
 %
-We implemented our occlusion-free lens by modifying a standard DVR ray caster, publicly available in NVIDIA CUDA's SDK\,\cite{cudasdk}. We modified this ray caster to incorporate the new ray definition (Eqns.~\ref{eqn:gathering} and \ref{eqn:scattering}), the lens effect, and the local per-voxel Phong lighting parameters, all controlled via keyboard and mouse. On a PC with 16 GB RAM and a GeForce GTX TITAN X card, we achieve 15 frames per second for volumes up to $512^3$ voxels at a $1900 \times 1200$ pixels screen resolution. Currently, we use a compositing ray function. Any other functions can be directly used with no restrictions. All in all, adding our lens to an existing ray caster should pose no significant implementation problems.
+We implemented our occlusion-free lens by modifying a standard DVR ray caster, publicly available in NVIDIA CUDA's SDK\,\cite{cudasdk}. We modified this ray caster to incorporate the new ray definition (Eqns.~\ref{eqn:gathering} and \ref{eqn:scattering}), the lens effect, and the local per-voxel Phong lighting parameters, all controlled via keyboard and mouse. On a PC with 16 GB RAM and a GeForce GTX TITAN X card, we achieve 15 frames per second for volumes up to $512^3$ voxels at a $1900 \times 1200$ pixels screen resolution. All in all, adding our lens to an existing ray caster should pose no significant implementation problems.
 
 \begin{comment}
 %ALEX: Commented out the algo pseudocode. There are so far several problems with it, needs to be rewritten, anyways using the current notations. We can see if we have space/time to do it when all else is ready.
