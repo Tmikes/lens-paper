@@ -25,7 +25,7 @@ The Authors\\
     proposed in this paper meet these four requirements? Please consider each
     reviewer's comments / requests for clarification related to R1 through R4.
     
-    \rr{We agree, and thus we have added a more detailed explanation of R1..R4 at the beginning of Sec. 2.}.\\
+    \rr{We agree, and thus we have added a more detailed explanation of R1..R4 at the beginning of Sec. 2. Related to how our method covers the requirements, this is explained in Sec. 6 (discussion).}\\
 
 \noindent 2) The authors need to compare their method to other F+C methods. Do these
     previous methods meet the four requirements? (one reviewer suggests including this
@@ -85,14 +85,14 @@ The Authors\\
     Secondly. the paper is lacking formal justification of their work by comparing
     their results to existing methods. [...shortened for brevity]
     
-    \rr{We addressed this in the revision by adding a summary table listing requirements \emph{vs} selected relevant F+C techniques (see Sec. 2.3 and related comment of R1). Also, we outlined here the amount of similar comparisons done by existing F+C papers. This way, we hope that our relative position (both in contributions and amount of comparison) with respect to existing work is more clear.}\\
+    \rr{We addressed this in the revision by adding a summary table listing requirements \emph{vs} selected relevant F+C techniques (see Sec. 2 and related comment of R1). Also, we outlined that in existing related papers, typically no side-by-side comparisons against other lens or F+C techniques are present. For instance, none of the techniques listed in the newly added Tab. 1 has such a comparison. As R4 already comments, this is (very likely) due to the difficulty of replicating such techniques. We acknowledge that this is indeed a problem of the field, and indirectly of our work (added comments to this end to the Limitations section of the discussion).}\\
     
     Since the paper claims that the technique could be applied to
     general datasets (and shown in section 5), the authors need to justify how their
     technique is better than the specific scientific visualizations resolving for
     occlusions.
     
-    \rr{We are not sure what the `specific scientific visualizations' here refer to. If these are alternative visualization techniques that aim to look at the same datasets we consider (to treat the same use-cases), then we believe that we do this, see our comment with respect to the comparisons for R1.}\\
+    \rr{We are not sure what the `specific scientific visualizations' here refer to. If these are alternative visualization techniques that aim to look at the same datasets we consider (to treat the same use-cases), then we believe that we do this, see our comment with respect to the comparisons for R1. If these are alternative lens/F+C techniques, please see the answer to the above comment.}\\
     
     A minor point: even though the authors have had discussions with experts in the
     field for each application scenario (section 5), a formal user study between
@@ -129,7 +129,7 @@ The Authors\\
     comparison with prior focus+context methods in the described use cases.
     
     \rr{To address this, we added a user study to being more evidence to the ease of use and general user feedback for one of the five discussed
-    use cases (Sec. 5.1).}\\
+    use cases (Sec. 5.1). Concerning the lack of side-by-side comparison with other techniques, please see the response related to the same question of R1.}\\
 
     First, the authors claim the proposed technique meets 4 requirements, but the requirements
     are not stated in enough detail. As such, it becomes confusing when prior work is
@@ -143,22 +143,32 @@ The Authors\\
     \rr{Agree, we can do better. See the added user study referred to above.}\\
     
     1. Please clearly explain the 4 requirements R1 through R4 before evaluating prior
-    work under these criteria. Specific points as follows:
+    work under these criteria. 
+    
+    \rr{We added a more detailed explanation of R1..R4 at the beginning of Sec. 2.}\\
+    
+    Specific points as follows:
     1a. It is not clear if R1 emphasizes "unobstructed" or "rapidly". Also, is it
     rapid due to a good user interface (in which case a user study might be needed to
     substantiate the claim), or is it due to computational performance?
-
+    
+    \rr{R1 emphasizes both: `unobstructed' refers to what the tool should do (functional requirement) and `rapidly' emphasizes how this should be achieved (that is, how much time is needed to create the view). As for time, we mean here mainly computational time. Indeed, user effort is also important as the reviewer correctly put, but it is harder to quantify.}\\
+    
     1b. R2 needs to be justified: Why is it desirable to be able to change *all*
     parameters?
+    
+    \rr{Correct. This is not what we actually meant by R2. Parameter changes are a means to an end, not the end. What we meant, is that the tool offers ways to change all relevant parameters which are needed to be changed so as to allow a flexible local exploration of the target zone. Since this is a too long formulation, we state R2 in the revised paper as `allow a flexible exploration of the target zone' (and refine that next in Sec. 2).}\\
 
     1c. R3 is confusing because "global" could include both focus and context,
     therefore the meaning of "global context" is not clear.
+    
+    \rr{Indeed. By global context, we meant actually context in which the target is visually embedded in the visualization. To eliminate this confusion, we just call it `context' now.}\\
 
     1d. R4 can be better re-stated as handling datasets where targets and occluders
     can not be separated by transfer functions, which may depend on more than
     densities.
 
-    \rr{TBD!}\\
+    \rr{Agreed, this is actually what we intended to capture with R4, so we reformulate it as such.}\\
 
     2. Regarding R3 and the preservation of the context: In the proposed method, the
     user is sometimes required to peel away the context by adjusting transfer
@@ -175,13 +185,13 @@ The Authors\\
     3a. Indeed only 3 out of 5 use cases have user feedback, and the other 2 lack
     evaluation.
     
-    \rr{Correct. As explained also in response to R1, we (a) softened the claims where we cannot make them hard, and (b) added a user study for the baggage inspection scenario. While not exhaustive (no user study will probably be when evaluating and end-to-end application..), this brings more support to our claims.}\\
+    \rr{Correct. As explained also in response to R1, we (a) softened the claims where we cannot make them hard, and (b) added a user study for the baggage inspection scenario. While not exhaustive (no user study will probably be when evaluating and end-to-end application..), this brings more support to our claims. Also, we added a summary of the amount of evaluation (in terms of use-cases being considered) in related work, see Tab. 1. We believe our evaluation is roughly on par with this (of course, details in the evaluation procedures of all the papers listed there differ).}\\
     
     
     4. If space permits, the prior work and the requirements they meet should be
     organized as a table.
     
-    \rr{Good idea (!) We added this table to Sec. 2.3.}\\
+    \rr{Good idea (!) We added this table to Sec. 2.}\\
     
     5. The scattered rays intersect un-distorted rays outside of the lens. This
     potentially causes duplicate sampling. Please explain if this is an issue, and how
@@ -233,7 +243,7 @@ The Authors\\
     perform enough basis analysis (from principals presented in the papers) to show
     the advantages of this proposed method over previous work.
     
-    \rr{This is a hard but fair point, we of course have thought about it. The key problem was/is not so much the time or effort, but being \textbf{sure} we could reimplement existing F+C techniques (at least, state of the art ones which are the most relevant for comparing against) is not just time consuming, but it is often just not doable because there are so many `implementation-level' details missing in their description. That is: we could choose indeed technique X or Y from the literature and aim to replicate it, but especially for interactive-lens techniques, this is extremely hard, since there are usually many details being glossed over. As such, how would we know we are `really' replicating technique X or Y in our implementation? And, if we did some mistakes in our implementation (as opposed to the original X or Y), how can we then justify that our evaluation of X or Y leads to unsatisfactory results? Would we then evaluate the inherent limitations of X or Y, or our interpretation of how they are to be implemented? This, we believe, is a great(er) problem of evaluation in interactive infovis, for which we do not have a ready answer. But this is a very fair point. We mention it explicitly in the discussion section.}\\
+    \rr{This is a hard but fair point, we of course have thought about it. The key problem was/is not so much the time or effort, but being \textbf{sure} we could reimplement existing F+C techniques (at least, state of the art ones which are the most relevant for comparing against) is not just time consuming, but it is often just not doable because there are so many `implementation-level' details missing in their description. That is: we could choose indeed technique X or Y from the literature and aim to replicate it, but especially for interactive-lens techniques, this is extremely hard, since there are usually many details being glossed over. As such, how would we know we are `really' replicating technique X or Y in our implementation? And, if we did some mistakes in our implementation (as opposed to the original X or Y), how can we then justify that our evaluation of X or Y leads to unsatisfactory results? Would we then evaluate the inherent limitations of X or Y, or our interpretation of how they are to be implemented? This, we believe, is a great(er) problem of evaluation in interactive infovis, for which we do not have a ready answer. But this is a very fair point. We mention it explicitly in the discussion section. Also, we note that none of the techniques listed in Tab. 1 (which include suggested references by reviewers) does a side-by-side evaluation in the above sense, for very likely the reasons mentioned above. We also mention this in the discussion.}\\
     
     In section 4 the authors indicate that they used a compositing ray function but
     that any other ray function could be used instead. I am not sure that is true -
