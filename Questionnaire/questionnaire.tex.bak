@@ -1,0 +1,118 @@
+\documentclass[a4paper]{exam}
+\usepackage{amssymb}
+\usepackage{array,longtable}
+
+\newcounter{mquestion}
+\newcounter{row}
+
+\makeatletter
+\newtoks\@tabtoks
+\newcommand\addtabtoks[1]{\@tabtoks\expandafter{\the\@tabtoks#1}}
+\newcommand*\resettabtoks{\@tabtoks{}}
+\newcommand*\printtabtoks{\the\@tabtoks}
+\makeatother
+
+\newcommand\CheckTable[1]{%
+  \setcounter{mquestion}{0}
+  \setcounter{row}{0}
+  \resettabtoks
+  \loop\ifnum\therow<#1\relax
+    \stepcounter{row}
+    \addtabtoks{& $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\}%
+  \repeat
+  \begin{longtable}{>{\stepcounter{mquestion}}l*{5}{c}}
+    \multicolumn{1}{c}{} & Bad & Not Bad & Neutral & OK & Good \\
+    \printtabtoks
+  \end{longtable}%
+}
+
+
+\newcommand\CheckTablelevel[1]{%
+  \setcounter{mquestion}{0}
+  \setcounter{row}{0}
+  \resettabtoks
+  \loop\ifnum\therow<#1\relax
+    \stepcounter{row}
+    \addtabtoks{& $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\}%
+  \repeat
+  \begin{longtable}{>{\stepcounter{mquestion}}l*{5}{c}}
+    \multicolumn{1}{c}{} & Novice &  Adv. Beginner &  Competent & Proficient  & Expert \\
+    \printtabtoks
+  \end{longtable}%
+}
+
+\newcommand\CheckTableDifficulty[1]{%
+  \setcounter{mquestion}{0}
+  \setcounter{row}{0}
+  \resettabtoks
+  \loop\ifnum\therow<#1\relax
+    \stepcounter{row}
+    \addtabtoks{& $\square$ & $\square$ & $\square$ & $\square$ & $\square$ \\}%
+  \repeat
+  \begin{longtable}{>{\stepcounter{mquestion}}l*{5}{c}}
+    \multicolumn{1}{c}{} & Easy & Quite Easy & Neutral & Quite Hard & Hard \\
+    \printtabtoks
+  \end{longtable}%
+}
+
+
+\usepackage{xpatch}% http://ctan.org/pkg/etoolbox
+\xpatchcmd{\answerline}% <cmd>
+  {\par\nobreak\vskip\answerskip}% <search>
+  {}% <replace>
+  {}{}% <success><failure>
+
+\newcommand{\leftanswerline}[1][]%
+{\ifthenelse{\equal{#1}{}}%
+{\par\hspace{-1.3em}\begin{minipage}{1em}\answerline\end{minipage}}%
+{\par\hspace{-1.3em}\begin{minipage}{1em}\answerline[#1]\end{minipage}}%
+}
+
+\begin{document}
+
+\section{Information}
+
+ Age: ......... \newline
+ Profession: .................. \newline
+ Years of professional experience: ................ \newline
+ Familiarity with 3D: 
+\CheckTablelevel{1}
+
+\section{Scenario 1: Random Observation }
+Evaluate the level of difficulty when using the lens randomly to detect an object by changing the depth of the lens:
+\CheckTableDifficulty{1}
+Comments:................................................................................ \newline \newline
+How do you estimate the value of this tool?
+\CheckTable{1}
+Comments:................................................................................ \newline \newline
+Compared with the traditional tools of scanners, I find that the present tool has added value
+\CheckTable{1}
+Comments:................................................................................ \newline \newline
+
+\section{Scenario 2: Observation of an area of interest }
+Evaluate the level of difficulty of using the lens on a partially visible object
+\CheckTableDifficulty{1}
+Comments:................................................................................ \newline \newline
+How do you estimate the value of this tool?
+\CheckTable{1}
+Comments:................................................................................ \newline \newline
+Compared with the traditional tools of scanners, I find that the present tool has added value
+\CheckTable{1}
+Comments:................................................................................ 
+\section{Suggestions}
+
+
+  Do you have any ideas for improving the tool?\newline
+Comments: \newline
+................................................................................................................ \newline
+................................................................................................................ \newline
+................................................................................................................ \newline
+
+Do you have scenarios in which this tool would be very useful? \newline
+Comments: \newline
+................................................................................................................ \newline
+................................................................................................................ \newline
+................................................................................................................ \newline 
+
+
+\end{document}
