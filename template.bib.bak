@@ -11,6 +11,13 @@ doi={10.1109/TVCG.2007.1051},
 ISSN={1077-2626}, 
 }
 
+@book{brierley,
+author = {Brierley, J.D. and Gospodarowicz, M.K. and Wittekind, C.},
+year = 2017,
+title = {{TNM} classification of malignant tumours},
+publisher = {Wiley-Blackwell}
+}
+
 @book{merzkirch2012flow,
   title={Flow visualization},
   author={Merzkirch, Wolgang},
@@ -43,6 +50,25 @@ keywords = {Categories and Subject Descriptors (according to ACM CCS), I.3.3 [Co
 year = {2016},
 }
 
+@article{wu16,
+title = {Multiperspective Focus+Context Visualization},
+author = {M. L. Wu and V. Popescu},
+journal = {IEEE TVCG},
+year = 2016,
+volume = 22,
+number = 5,
+pages = {1555-1567}
+}
+
+@article{cui10,
+author = {J. Cui and P. Rosen and V. Popescu and C. Hoffmann},
+title = {A curved ray camera for handling occlusions through continuous multiperspective visualization},
+journal = {IEEE TVCG},
+volume = 16,
+number = 6,
+pages = {1235-1242},
+year = 2010
+}
 
 @ARTICLE{6327262, 
 author={C. Tominski and H. Schumann and G. Andrienko and N. Andrienko}, 
@@ -73,6 +99,13 @@ note = {\url{http://www.nvidia.com/object/cuda_get_samples_3.html}},
 year = 2018
 }
 
+@inproceedings{zwan12,
+title = {Continuous Navigation of Nested Abstraction Levels},
+author = {M. van der Zwan and A. Telea and T. Isenberg}, 
+booktitle = {Proc. EuroVis (short papers)}, 
+year = {2012}
+}
+
 @article{cubu,
 author = {M. van der Zwan and V. Codreanu and A. Telea},
 title = {{CUBu}: Universal Real-Time Bundling for Large Graphs},
@@ -98,7 +131,7 @@ year = 2016
 }
 
 @article{slicer,
-author = {R. Kikinis R and S. D. Pieper and K. Vosburgh},
+author = {R. Kikinis  and S. D. Pieper and K. Vosburgh},
 title = {{3D Slicer}: A platform for subject-specific image analysis, visualization, and clinical support},
 year = 2014,
 journal = {Intraoperative Imaging Image-Guided Therapy},
@@ -134,16 +167,14 @@ pages = {277-289}
 }
 @ARTICLE{4015467, 
 author={S. Bruckner and M. E. Gr{\"o}ller}, 
-journal={IEEE Transactions on Visualization and Computer Graphics}, 
+journal={IEEE TVCG}, 
 title={Exploded Views for Volume Data}, 
 year={2006}, 
 volume={12}, 
 number={5}, 
 pages={1077-1084}, 
-keywords={data visualisation;hidden feature removal;rendering (computer graphics);GPU-based volume ray casting algorithm;context information;exploded views;force-based model;occlusion;view-dependent explosion;volume data;Casting;Computer graphics;Data visualization;Explosions;Force control;Geometry;Rendering (computer graphics);Tomography;exploded views;illustrative visualization;volume rendering;Algorithms;Anatomy, Cross-Sectional;Computer Graphics;Computer Simulation;Computer-Assisted Instruction;Humans;Image Enhancement;Image Interpretation, Computer-Assisted;Imaging, Three-Dimensional;Information Storage and Retrieval;Models, Anatomic;User-Computer Interface}, 
-doi={10.1109/Transactions on Visualization and Computer Graphics.2006.140}, 
 ISSN={1077-2626}, 
-month={Sept},}
+}
 
 @article{Correa:2007:IDD:1313046.1313163,
  author = {Correa, Carlos and Silver, Debora and Chen, Mi},
@@ -184,23 +215,15 @@ month={Sept},}
 
 @article{Hsu:2011:RFM:2070781.2024165,
  author = {Hsu, Wei-Hsien and Ma, Kwan-Liu and Correa, Carlos},
- title = {A Rendering Framework for Multiscale Views of 3D Models},
+ title = {A Rendering Framework for Multiscale Views of {3D} Models},
  journal = {ACM Trans. Graph.},
- issue_date = {December 2011},
  volume = {30},
  number = {6},
  month = dec,
  year = {2011},
- issn = {0730-0301},
  pages = {131:1--131:10},
  articleno = {131},
  numpages = {10},
- url = {http://doi.acm.org/10.1145/2070781.2024165},
- doi = {10.1145/2070781.2024165},
- acmid = {2024165},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {camera model, levels of detail, multiscale views, visualization},
 } 
 
 
@@ -982,7 +1005,7 @@ ISSN={0272-1716},
 
 @inproceedings{Sonnet:2004:IEA:989863.989871,
  author = {Sonnet, Henry and Carpendale, Sheelagh and Strothotte, Thomas},
- title = {Integrating Expanding Annotations with a 3D Explosion Probe},
+title = {Integrating Expanding Annotations with a {3D} Explosion Probe},
  booktitle = {Proceedings of the Working Conference on Advanced Visual Interfaces},
  series = {AVI '04},
  year = {2004},
